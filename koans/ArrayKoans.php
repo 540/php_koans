@@ -75,7 +75,7 @@ class ArrayKoans extends TestCase
     {
         $numbers = array(3,2,2,1);
 
-        //Sort the elements of the $numbers array in ascending order
+        //Sort the elements of the $numbers array in ascending order (Hint: There are functions to sort arrays)
 
         $this->assertEquals(__,1);
         $this->assertEquals(__,2);
