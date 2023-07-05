@@ -104,7 +104,7 @@ docker run -ti php-koans
 ## Getting Started
 
 If all the koans are to be executed from terminal:
-./vendor/bin/phpunit -c phpunit.xml
+`./vendor/bin/phpunit -c phpunit.xml`
 
 ![img.png](screenshots/run_all_koans.png)
 
@@ -117,7 +117,7 @@ Failed asserting that false is true.
 It also tells me exactly where the problem is, it's an assert on line 15 of .\koans\AssertKoans.php. This one is easy, just change `FALSE` to `TRUE` to make the test pass.
 
 If only koans of a class are to be executed:
-./vendor/bin/phpunit -c phpunit.xml koans/StringManipulationKoans.php
+`./vendor/bin/phpunit -c phpunit.xml koans/StringManipulationKoans.php`
 ![img.png](screenshots/run_specific_koans_class.png)
 
 We can also adjust if we want the koans to keep running after one fails or we want ot continue:
