@@ -2,8 +2,6 @@
 
 PHP Koans is heavily based on Greg Malcolm's [Python Koans](https://github.com/gregmalcolm/python_koans), which is based on Edgecase's [Ruby Koans](http://rubykoans.com/). Much credit to both projects. Thank you!
 
-![PHP Koans Screenshot](screenshots/php_koans.png?raw=true "PHP Koans Screenshot")
-
 PHP Koans is an interactive tutorial for learning the PHP programming language by making tests pass.
 
 Most tests are fixed by filling the missing parts of assert functions. Eg:
@@ -105,16 +103,10 @@ docker run -ti php-koans
 
 ## Getting Started
 
-From a *nix terminal or windows command prompt go to the php_koans folder and run:
+If all the koans are to be executed from terminal:
+`./vendor/bin/phpunit -c phpunit.xml`
 
-```
-php contempate_koans
-```
-
-In my I fire up my Terminal app and run this:
-
-![PHP Koans Screenshot](screenshots/php_koans-step1.png?raw=true "PHP Koans First Run")
-
+![img.png](screenshots/run_all_koans.png)
 
 Apparently, a test failed:
 
@@ -124,6 +116,12 @@ Failed asserting that false is true.
 
 It also tells me exactly where the problem is, it's an assert on line 15 of .\koans\AssertKoans.php. This one is easy, just change `FALSE` to `TRUE` to make the test pass.
 
+If only koans of a class are to be executed:
+`./vendor/bin/phpunit -c phpunit.xml koans/StringManipulationKoans.php`
+![img.png](screenshots/run_specific_koans_class.png)
+
+We can also adjust if we want the koans to keep running after one fails or we want ot continue:
+![img_2.png](screenshots/adjust_stop_on_failure.png)
 ## PHPUnit
 
 This koans project uses Sebastian Bergmann's wonderful [PHPUnit](https://phpunit.de/) command ([source code](https://github.com/sebastianbergmann/phpunit)). The PHAR binary is included in this project for convenience and to lower the setup curve. It has been renamed from `phpunit` to `contemplate_koans` to fit with the theme of this project. See `LICENSE_PHPUnit` for the relevant license information.
