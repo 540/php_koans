@@ -24,7 +24,6 @@ class ArrayKoans extends TestCase
     {
         $fruits = array("Apple", "Banana", "Pineaple", "Cherry");
 
-        // is_string() returns a true or false
         $this->assertEquals(__, count($fruits));
     }
 
@@ -69,4 +68,33 @@ class ArrayKoans extends TestCase
         $this->assertEquals(__, "Model Car: Aston Martin , Car Color: Black, Car Id: 5052 ZZA");
     }
 
+    /**
+     * @testdox
+     */
+    public function testAscendingOrderOnArray()
+    {
+        $numbers = array(3,2,2,1);
+
+        //Sort the elements of the $numbers array in ascending order
+
+        $this->assertEquals(__,1);
+        $this->assertEquals(__,2);
+        $this->assertEquals(__,2);
+        $this->assertEquals(__,3);
+    }
+
+    /**
+     * @testdox
+     */
+    public function testDescendingOrderOnArray()
+    {
+        $cars = array("BMW", "Mercedes", "Aston Martin");
+
+        //Sort the elements of the $cars array in descending alphabetical order
+
+        $this->assertEquals(__, 'Mercedes');
+        $this->assertEquals(__, 'BMW');
+        $this->assertEquals(__, 'Aston Martin');
+    }
+    
 }
