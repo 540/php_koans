@@ -8,7 +8,7 @@ defined('__') or define('__', null);
 class ArrayKoans extends TestCase
 {
     /**
-     * @testdox
+     * @testdox Index 0 is the first element of an array
      */
     public function testGetTheValueOfAnArray()
     {
@@ -18,7 +18,7 @@ class ArrayKoans extends TestCase
     }
 
     /**
-     * @testdox
+     * @testdox Use count to calculate array lenght
      */
     public function testArrayLength()
     {
@@ -28,7 +28,7 @@ class ArrayKoans extends TestCase
     }
 
     /**
-     * @testdox
+     * @testdox Arrays can be of type key=>value
      */
     public function testGetTheAgeOnAssociativeArrays()
     {
@@ -39,7 +39,7 @@ class ArrayKoans extends TestCase
     }
 
     /**
-     * @testdox
+     * @testdox You can iterate through an array using loops
      */
     public function testForEachOnAssociativeArrays()
     {
@@ -52,7 +52,7 @@ class ArrayKoans extends TestCase
     }
 
     /**
-     * @testdox
+     * @testdox An array can be made up of more arrays
      */
     public function testMultidimensionalArray()
     {
@@ -69,7 +69,7 @@ class ArrayKoans extends TestCase
     }
 
     /**
-     * @testdox
+     * @testdox You can sort an array in ascending order
      */
     public function testAscendingOrderOnArray()
     {
@@ -84,7 +84,7 @@ class ArrayKoans extends TestCase
     }
 
     /**
-     * @testdox
+     * @testdox You can sort an array in descending order
      */
     public function testDescendingOrderOnArray()
     {
@@ -96,5 +96,5 @@ class ArrayKoans extends TestCase
         $this->assertEquals(__, 'BMW');
         $this->assertEquals(__, 'Aston Martin');
     }
-    
+
 }
