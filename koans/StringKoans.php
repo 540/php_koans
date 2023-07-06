@@ -77,9 +77,9 @@ It was the worst of times.";
     public function testStringsCanBeWrappedInAHeredocSyntax()
     {
         $string = <<<EOT
-Howdy,
-world!
-EOT;
+            Howdy,
+            world!
+        EOT;
         // Hint: First and last line breaks of a Heredoc don't count
         $this->assertEquals(__, strlen($string));
     }
