@@ -25,7 +25,7 @@ class FunctionsKoans extends TestCase
      */
     public function testMethodParameters()
     {
-        function add($a, $b)
+        function add($a, $b): int
         {
             return $a + $b;
         }
@@ -38,7 +38,7 @@ class FunctionsKoans extends TestCase
      */
     public function testFunctionDefaultParameters()
     {
-        function greet($name = 'Guest')
+        function greet($name = 'Guest'): string
         {
             return 'Hello, ' . $name . '!';
         }
@@ -55,7 +55,7 @@ class FunctionsKoans extends TestCase
      */
     public function testFunctionMultipleReturnValues()
     {
-        function getFullName()
+        function getFullName(): array
         {
             $firstName = 'John';
             $lastName = 'Doe';
@@ -74,7 +74,7 @@ class FunctionsKoans extends TestCase
      */
     public function testRecursiveFunction()
     {
-        function factorial($n)
+        function factorial($n): int
         {
             if ($n === 0) {
                 return 1;
