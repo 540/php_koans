@@ -65,7 +65,7 @@ class StringKoans extends TestCase
     public function testStringsCanContinueOntoMultipleLines()
     {
         $string = "It was the best of times,
-It was the worst of times.";
+        It was the worst of times.";
 
         // strlen() returns the length of a string as an integer (Hint: line breaks count as a character)
         $this->assertEquals(__, strlen($string));
@@ -77,8 +77,8 @@ It was the worst of times.";
     public function testStringsCanBeWrappedInAHeredocSyntax()
     {
         $string = <<<EOT
-            Howdy,
-            world!
+        Howdy,
+        world!
         EOT;
         // Hint: First and last line breaks of a Heredoc don't count
         $this->assertEquals(__, strlen($string));
@@ -92,9 +92,9 @@ It was the worst of times.";
     public function testHeredocIdentifierIsArbitrary()
     {
         $string = <<<OMPHALOSKEPSIS
-Howdy,
-world!
-OMPHALOSKEPSIS;
+        Howdy,
+        world!
+        OMPHALOSKEPSIS;
 
         $this->assertEquals(__, strlen($string));
     }
@@ -106,9 +106,9 @@ OMPHALOSKEPSIS;
     {
         // Note the single quotes around EOT, this is the Nowdoc syntax
         $string = <<<'EOT'
-Howdy,
-world!
-EOT;
+        Howdy,
+        world!
+        EOT;
         // Hint: First and last line breaks of a Heredoc don't count
         $this->assertEquals(__, strlen($string));
     }
