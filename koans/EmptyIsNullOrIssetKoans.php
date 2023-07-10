@@ -26,9 +26,9 @@ class EmptyIsNullOrIssetKoans extends TestCase
 
         $array = array('bar' => 1, 'foo' => null);
         $this->assertEquals(__, isset($array));
-        $this->assertEquals(__ , isset($array['bar']));
-        $this->assertEquals(__ , isset($array['foo']));
-        $this->assertEquals(__ , isset($array['barfoo']));
+        $this->assertEquals(__, isset($array['bar']));
+        $this->assertEquals(__, isset($array['foo']));
+        $this->assertEquals(__, isset($array['barfoo']));
 
     }
 
