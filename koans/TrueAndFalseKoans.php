@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpKoans;
 
 use PHPUnit\Framework\TestCase;
@@ -7,12 +8,11 @@ defined('__') or define('__', null);
 
 class TrueAndFalseKoans extends TestCase
 {
-    // Rule: You can only use true or false for the solution
 
     /**
      * @testdox 3 and '3' are the same thing, but, the type? (Equal operator)
      */
-    public function testStringAndIntAreEqual()
+    public function testStringAndIntAreEqualIfYouUseEqualOperator()
     {
         $int = 3;
         $str = '3';
@@ -23,7 +23,7 @@ class TrueAndFalseKoans extends TestCase
     /**
      * @testdox 3 and '3' are identical, or not? (Identical operator)
      */
-    public function testStringAndIntAreNotIdentical()
+    public function testStringAndIntAreNotIdenticalIfYouUseIdenticalOperator()
     {
         $int = 3;
         $str = '3';
@@ -39,7 +39,7 @@ class TrueAndFalseKoans extends TestCase
         $int = 3;
         $str = '3';
 
-        $this->assertEquals(__, $int!=$str);
+        $this->assertEquals(true, $int!=$str);
     }
 
     /**
@@ -50,7 +50,7 @@ class TrueAndFalseKoans extends TestCase
         $int = 3;
         $str = '3';
 
-        $this->assertEquals(__, $int!==$str);
+        $this->assertEquals(false, $int!==$str);
     }
 
     /**
