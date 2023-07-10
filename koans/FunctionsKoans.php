@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpKoans;
 
 use PHPUnit\Framework\TestCase;
@@ -87,5 +88,4 @@ class FunctionsKoans extends TestCase
 
         $this->assertEquals(__, $result);
     }
-
 }
