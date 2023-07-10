@@ -17,7 +17,7 @@ class ClassesKoans extends TestCase
      */
     public function testInstanceOfAClass()
     {
-        $exampleClass = 'I want to be an object of class Car';
+        $exampleClass = 'I want to be an object of class ExampleClass';
 
         $this->assertTrue(is_object($exampleClass));
     }
