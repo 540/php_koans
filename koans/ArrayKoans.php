@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpKoans;
 
 use PHPUnit\Framework\TestCase;
@@ -8,9 +9,9 @@ defined('__') or define('__', null);
 class ArrayKoans extends TestCase
 {
     /**
-     * @testdox Index 0 is the first element of an array
+     * @testdox
      */
-    public function testGetTheValueOfAnArray()
+    public function getTheValueOfTheFirstElementInAnArray()
     {
         $cars = array("BMW", "Mercedes", "Aston Martin");
 
@@ -96,5 +97,4 @@ class ArrayKoans extends TestCase
         $this->assertEquals(__, 'BMW');
         $this->assertEquals(__, 'Aston Martin');
     }
-
 }

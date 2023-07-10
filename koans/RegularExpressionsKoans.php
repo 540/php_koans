@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpKoans;
 
 use PHPUnit\Framework\TestCase;
@@ -41,5 +42,4 @@ class RegularExpressionsKoans extends TestCase
         $str_replaced = "";
         $this->assertEquals($str_replaced, "This is the PHP Koans, PHP Rules!.");
     }
-
 }

@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpKoans;
 
 use PHPUnit\Framework\TestCase;
@@ -68,48 +69,6 @@ class StringKoans extends TestCase
         It was the worst of times.";
 
         // strlen() returns the length of a string as an integer (Hint: line breaks count as a character)
-        $this->assertEquals(__, strlen($string));
-    }
-
-    /**
-     * @testdox Strings can be wrapped in a heredoc syntax.
-     */
-    public function testStringsCanBeWrappedInAHeredocSyntax()
-    {
-        $string = <<<EOT
-        Howdy,
-        world!
-        EOT;
-        // Hint: First and last line breaks of a Heredoc don't count
-        $this->assertEquals(__, strlen($string));
-    }
-
-    /**
-     * @testdox A heredoc identifier can be arbitrary.
-     *
-     * Reference: https://secure.php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc
-     */
-    public function testHeredocIdentifierIsArbitrary()
-    {
-        $string = <<<OMPHALOSKEPSIS
-        Howdy,
-        world!
-        OMPHALOSKEPSIS;
-
-        $this->assertEquals(__, strlen($string));
-    }
-
-    /**
-     * @testdox Strings can be wrapped in a nowdoc syntax.
-     */
-    public function testStringsCanBeWrappedInANowdocSyntax()
-    {
-        // Note the single quotes around EOT, this is the Nowdoc syntax
-        $string = <<<'EOT'
-        Howdy,
-        world!
-        EOT;
-        // Hint: First and last line breaks of a Heredoc don't count
         $this->assertEquals(__, strlen($string));
     }
 

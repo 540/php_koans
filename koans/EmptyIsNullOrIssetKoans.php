@@ -1,7 +1,9 @@
 <?php
 
 namespace PhpKoans;
+
 use PHPUnit\Framework\TestCase;
+
 defined('__') or define('__', null);
 
 class EmptyIsNullOrIssetKoans extends TestCase
@@ -11,7 +13,7 @@ class EmptyIsNullOrIssetKoans extends TestCase
      */
     function testMethodIsNull()
     {
-        $this->assertEquals(__, is_null(NULL));
+        $this->assertEquals(__, is_null(null));
         $this->assertEquals(__, is_null(""));
     }
 
