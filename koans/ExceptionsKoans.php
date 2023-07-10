@@ -4,6 +4,7 @@ namespace PhpKoans;
 
 use Exception;
 use LogicException;
+use PhpKoans\Exceptions\CustomGenericException;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
 
@@ -81,15 +82,9 @@ class ExceptionsKoans extends TestCase
      */
     public function testCustomExceptionClass()
     {
-        $this->expectException(CustomException::class);
+        $this->expectException(CustomGenericException::class);
         $this->expectExceptionMessage(__);
 
-        throw new CustomException('Custom exception occurred');
+        throw new CustomGenericException();
     }
-
-}
-
-//You can create custom exceptions extending the base Exception class
-class CustomException extends Exception
-{
 }
