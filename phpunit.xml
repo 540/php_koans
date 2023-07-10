@@ -5,7 +5,7 @@
     processIsolation="false"
     stopOnError="true"
     printerClass="KoansLib\KoanPrinter"
-    stopOnFailure="false"
+    stopOnFailure="true"
 >
 
     <testsuites>
