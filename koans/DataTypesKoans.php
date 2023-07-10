@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpKoans;
 
 use PHPUnit\Framework\TestCase;
@@ -9,53 +10,39 @@ defined('__') or define('__', null);
 class DataTypesKoans extends TestCase
 {
     /**
-     * @testdox Strings can be created using single quotes
+     * @testdox A string is a data type that is used to represent text
      */
-    public function testStringsWithSingleQuotes()
+    public function testCreateStringUsingSingleOrDoubleQuotes()
     {
-        $str = 'Hello, world!';
+        $str = 3;
 
-        $this->assertEquals(__, $str);
-        $this->assertEquals(__, is_string($str));
+        $this->assertTrue(is_string($str));
     }
 
     /**
-     * @testdox Strings can also be created using double quotes
+     * @testdox Integers are numbers without decimals
      */
-    public function testStringsWithDoubleQuotes()
+    public function testCreateIntUsingNumbersWithoutDecimals()
     {
-        $str = "Hello, world!";
+        $int = 'I want to be an int';
 
-        $this->assertEquals(__, $str);
-        $this->assertEquals(__, is_string($str));
-    }
-
-    /**
-     * @testdox Integers can be defined without decimal points
-     */
-    public function testIntegers()
-    {
-        $int = 42;
-
-        $this->assertEquals(__, $int);
-        $this->assertEquals(__, is_int($int));
+        $this->assertTrue(is_int($int));
     }
 
     /**
      * @testdox Floats are numbers with decimal points
      */
-    public function testFloats()
+    public function testCreateFloatUsingNumbersWithDecimalPoints()
     {
-        $float = 3.14;
+        $float = 1;
 
-        $this->assertEquals(__, $float);
-        $this->assertEquals(__, is_float($float));
+        $this->assertTrue(is_float($float));
     }
 
     /**
      * @testdox Booleans represent true or false values
      */
-    public function testBooleans()
+    public function testCreateBooleansUsingTrueOrFalse()
     {
         $boolTrue = true;
         $boolFalse = false;
@@ -69,7 +56,7 @@ class DataTypesKoans extends TestCase
     /**
      * @testdox Arrays can hold multiple values
      */
-    public function testArrays()
+    public function testCreateArrayUsingBrackets()
     {
         $array = [1, 2, 3];
 
@@ -84,18 +71,16 @@ class DataTypesKoans extends TestCase
     {
         $object = new stdClass();
 
-        $this->assertEquals(__, $object);
         $this->assertEquals(__, is_object($object));
     }
 
     /**
-     * @testdox NULL represents the absence of a value
+     * @testdox Null represents the absence of a value
      */
     public function testNull()
     {
         $null = null;
 
-        $this->assertEquals(__, $null);
         $this->assertEquals(__, is_null($null));
     }
 
@@ -104,11 +89,10 @@ class DataTypesKoans extends TestCase
      */
     public function testResources()
     {
-        $resource = fopen('./README.md', 'r');
+        $resource = fopen('composer.json', 'r');
 
         $this->assertEquals(__, is_resource($resource));
 
         fclose($resource);
     }
-    
 }
