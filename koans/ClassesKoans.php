@@ -1,6 +1,11 @@
 <?php
+
 namespace PhpKoans;
 
+use Error;
+use PhpKoans\Classes\Car;
+use PhpKoans\Classes\ExampleClass;
+use PhpKoans\Classes\SportsCar;
 use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
@@ -10,11 +15,11 @@ class ClassesKoans extends TestCase
     /**
      * @testdox Classes can be defined using the `class` keyword and you can create multiple instances of a class (objects)
      */
-    public function testClassDefinition()
+    public function testInstanceOfAClass()
     {
-        $exampleClass = new ExampleClass();
+        $exampleClass = 'I want to be an object of class Car';
 
-        $this->assertTrue(__, class_exists('ExampleClass'));
+        $this->assertTrue(is_object($exampleClass));
     }
 
     /**
@@ -79,13 +84,9 @@ class ClassesKoans extends TestCase
     {
         $car = new Car('yellow', 'Mercedes');
 
-        $this->expectException(\Error::class);
+        $this->expectException(Error::class);
         $this->expectExceptionMessage('Fix me');
         $car->secretProperty;
-
-        $this->expectException(\Error::class);
-        $this->expectExceptionMessage('Fix me');
-        $car->secretMethod();
     }
 
     /**
@@ -103,15 +104,14 @@ class ClassesKoans extends TestCase
      */
     public function testInheritance()
     {
-        $car = new SportsCar('blue', 'Toyota');
+        $sportsCar = new SportsCar('blue', 'Toyota');
 
-        $this->assertEquals(__, $car->color);
-        $this->assertEquals(__, $car->getBrand());
+        SportsCar::$counter++;
+        $sportsCar->setColor('red');
 
-        $car->setColor('red');
-
-        $this->assertEquals('blue', $car->color);
-        $this->assertEquals(__, $car->getBrand());
+        $this->assertEquals(__,$sportsCar::getCount());
+        $this->assertEquals(__, $sportsCar->color);
+        $this->assertEquals(__, $sportsCar->getBrand());
     }
 
     /**
@@ -121,7 +121,7 @@ class ClassesKoans extends TestCase
     {
         $sportsCar = new SportsCar('yellow', 'Ferrari');
 
-        $this->assertEquals('Engine started!', $sportsCar->startEngine());
+        $this->assertEquals('Engine started', $sportsCar->startEngine());
         $this->assertEquals('Driving at 200 km/h', $sportsCar->drive(200));
     }
 
@@ -135,87 +135,4 @@ class ClassesKoans extends TestCase
         $this->assertEquals('This is protected', $sportsCar->getProtectedProperty());
         $this->assertEquals('Can I change?', $sportsCar->getSecret());
     }
-
-}
-
-class ExampleClass{
-    public string $exampleProperty ='Hi, I\'m a property';
-    public function exampleMethod(): string
-    {
-        return 'Hi, I\'m a method';
-    }
-}
-
-class Car
-{
-    public string $color;
-    private string $brand;
-    private string $secretProperty = 'This is a secret';
-    protected string $protectedProperty = 'This is protected';
-
-    public function __construct($color, $brand)
-    {
-        $this->color = $color;
-        $this->brand = $brand;
-    }
-
-    public function getBrand(): string
-    {
-        return $this->brand;
-    }
-
-    public function setColor($color): void
-    {
-        $this->color = $color;
-    }
-
-    public function getSecret(): string
-    {
-        return $this->secretProperty;
-    }
-
-    public function getProtectedProperty(): string
-    {
-        return $this->protectedProperty;
-    }
-
-    public function startEngine(): string
-    {
-        return 'Engine started!';
-    }
-
-    public function drive($speed): string
-    {
-        return 'Driving at ' . $speed . ' km/h';
-    }
-
-    private function secretMethod(): string
-    {
-        return 'This is a secret method';
-    }
-
-    public static int $counter = 0;
-
-    public static function getCount(): int
-    {
-        return self::$counter;
-    }
-
-}
-
-class SportsCar extends Car
-{
-    protected string $protectedProperty = 'The protected properties are visible in the subclass';
-    private string $secretProperty = 'Can I change?';
-
-    public function startEngine(): string
-    {
-        return 'Engine started with turbo!';
-    }
-
-    public function drive($speed): string
-    {
-        return 'Driving at ' . $speed . ' m/h';
-    }
-
 }
