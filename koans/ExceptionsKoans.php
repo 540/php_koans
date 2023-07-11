@@ -30,8 +30,8 @@ class ExceptionsKoans extends TestCase
     {
         try {
             throw new Exception('Something went wrong');
-        } catch (Exception $e) {
-            $this->assertEquals(__, $e->getMessage());
+        } catch (Exception $exception) {
+            $this->assertEquals(__, $exception->getMessage());
         }
     }
 
@@ -42,9 +42,9 @@ class ExceptionsKoans extends TestCase
     {
         try {
             throw new RuntimeException('Runtime exception occurred');
-        } catch (RuntimeException $e) {
-            $this->assertEquals(__, $e->getMessage());
-        } catch (Exception $e) {
+        } catch (RuntimeException $exception) {
+            $this->assertEquals(__, $exception->getMessage());
+        } catch (Exception $exception) {
             $this->fail('Should not catch this exception');
         }
     }
@@ -56,9 +56,9 @@ class ExceptionsKoans extends TestCase
     {
         try {
             throw new RuntimeException('Runtime exception occurred');
-        } catch (RuntimeException|LogicException $e) {
-            $this->assertEquals(__, $e->getMessage());
-        } catch (Exception $e) {
+        } catch (RuntimeException|LogicException $exception) {
+            $this->assertEquals(__, $exception->getMessage());
+        } catch (Exception $exception) {
             $this->fail('Should not catch this exception');
         }
     }
@@ -70,8 +70,8 @@ class ExceptionsKoans extends TestCase
     {
         try {
             throw new Exception('Something went wrong');
-        } catch (Exception $e) {
-            $this->assertEquals(__, $e->getMessage());
+        } catch (Exception $exception) {
+            $this->assertEquals(__, $exception->getMessage());
         } finally {
             $this->assertTrue(__);
         }
