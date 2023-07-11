@@ -9,9 +9,9 @@ defined('__') or define('__', null);
 class ArrayKoans extends TestCase
 {
     /**
-     * @testdox
+     * @testdox Index 0 is the first element of an array
      */
-    public function getTheValueOfTheFirstElementInAnArray()
+    public function testGetTheValueOfTheFirstElementInAnArray()
     {
         $cars = array("BMW", "Mercedes", "Aston Martin");
 
@@ -35,7 +35,7 @@ class ArrayKoans extends TestCase
     {
         $age = array("Joe"=>"49", "Mike"=>"27", "Charles"=>"32");
 
-        // Extract the Joe´s Age
+        // Extract Joe´s Age
         $this->assertEquals(__, "49");
     }
 
