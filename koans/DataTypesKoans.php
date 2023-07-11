@@ -14,9 +14,9 @@ class DataTypesKoans extends TestCase
      */
     public function testCreateStringUsingSingleOrDoubleQuotes()
     {
-        $str = 3;
+        $string = 3;
 
-        $this->assertTrue(is_string($str));
+        $this->assertTrue(is_string($string));
     }
 
     /**
@@ -24,9 +24,9 @@ class DataTypesKoans extends TestCase
      */
     public function testCreateIntUsingNumbersWithoutDecimals()
     {
-        $int = 'I want to be an int';
+        $integer = 'I want to be an int';
 
-        $this->assertTrue(is_int($int));
+        $this->assertTrue(is_int($integer));
     }
 
     /**
@@ -44,13 +44,13 @@ class DataTypesKoans extends TestCase
      */
     public function testCreateBooleansUsingTrueOrFalse()
     {
-        $boolTrue = true;
-        $boolFalse = false;
+        $booleanTrue = true;
+        $booleanFalse = false;
 
-        $this->assertEquals(__, $boolTrue);
-        $this->assertEquals(__, $boolFalse);
-        $this->assertEquals(__, is_bool($boolTrue));
-        $this->assertEquals(__, is_bool($boolFalse));
+        $this->assertEquals(__, $booleanTrue);
+        $this->assertEquals(__, $booleanFalse);
+        $this->assertEquals(__, is_bool($booleanTrue));
+        $this->assertEquals(__, is_bool($booleanFalse));
     }
 
     /**
