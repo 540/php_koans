@@ -6,7 +6,7 @@ class Car
 {
     public string $color;
     private string $brand;
-    private string $secretProperty = 'This is a secret';
+    private string $privateProperty = 'This is hidden out of the class';
     protected string $protectedProperty = 'This is protected';
     public static int $counter = 0;
 

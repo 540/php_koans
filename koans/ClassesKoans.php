@@ -5,7 +5,7 @@ namespace PhpKoans;
 use Error;
 use PhpKoans\Classes\Car;
 use PhpKoans\Classes\ExampleClass;
-use PhpKoans\Classes\SportsCar;
+use PhpKoans\Classes\SportCar;
 use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
@@ -23,7 +23,7 @@ class ClassesKoans extends TestCase
     }
 
     /**
-     * @testdox Properties can be defined in a class
+     * @testdox Classes can have properties and can only be accessed if they are public
      */
     public function testClassProperties()
     {
@@ -104,9 +104,9 @@ class ClassesKoans extends TestCase
      */
     public function testInheritance()
     {
-        $sportsCar = new SportsCar('blue', 'Toyota');
+        $sportsCar = new SportCar('blue', 'Toyota');
 
-        SportsCar::$counter++;
+        SportCar::$counter++;
         $sportsCar->setColor('red');
 
         $this->assertEquals(__,$sportsCar::getCount());
@@ -119,7 +119,7 @@ class ClassesKoans extends TestCase
      */
     public function testMethodOverride()
     {
-        $sportsCar = new SportsCar('yellow', 'Ferrari');
+        $sportsCar = new SportCar('yellow', 'Ferrari');
 
         $this->assertEquals('Engine started', $sportsCar->startEngine());
         $this->assertEquals('Driving at 200 km/h', $sportsCar->drive(200));
@@ -130,7 +130,7 @@ class ClassesKoans extends TestCase
      */
     public function testProtectedInheritance()
     {
-        $sportsCar = new SportsCar('yellow', 'Ferrari');
+        $sportsCar = new SportCar('yellow', 'Ferrari');
 
         $this->assertEquals('This is protected', $sportsCar->getProtectedProperty());
         $this->assertEquals('Can I change?', $sportsCar->getSecret());

@@ -2,7 +2,7 @@
 
 namespace PhpKoans\Classes;
 
-class SportsCar extends Car
+class SportCar extends Car
 {
     protected string $protectedProperty = 'The protected properties are visible in the subclass';
     private string $secretProperty = 'Can I change?';
