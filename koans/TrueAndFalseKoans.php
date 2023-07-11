@@ -14,10 +14,10 @@ class TrueAndFalseKoans extends TestCase
      */
     public function testStringAndIntAreEqualIfYouUseEqualOperator()
     {
-        $int = 3;
-        $str = '3';
+        $integer = 3;
+        $string = '3';
 
-        $this->assertEquals(__, $int==$str);
+        $this->assertEquals(__, $integer == $string);
     }
 
     /**
@@ -25,10 +25,10 @@ class TrueAndFalseKoans extends TestCase
      */
     public function testStringAndIntAreNotIdenticalIfYouUseIdenticalOperator()
     {
-        $int = 3;
-        $str = '3';
+        $integer = 3;
+        $string = '3';
 
-        $this->assertEquals(true, $int===$str);
+        $this->assertEquals(true, $integer === $string);
     }
 
     /**
@@ -36,21 +36,21 @@ class TrueAndFalseKoans extends TestCase
      */
     public function testWeCanUseNotEqual()
     {
-        $int = 3;
-        $str = '3';
+        $integer = 3;
+        $string = '3';
 
-        $this->assertEquals(true, $int!=$str);
+        $this->assertEquals(true, $integer != $string);
     }
 
     /**
-     * @testdox What happen if we use Not Identical Operator
+     * @testdox What happens if we use Not Identical Operator?
      */
     public function testWeCanUseNotIdentical()
     {
-        $int = 3;
-        $str = '3';
+        $integer = 3;
+        $string = '3';
 
-        $this->assertEquals(false, $int!==$str);
+        $this->assertEquals(false, $integer !== $string);
     }
 
     /**
@@ -70,7 +70,7 @@ class TrueAndFalseKoans extends TestCase
     /**
      * @testdox When you don't say anything are you saying the truth?
      */
-    public function testWhatHappenWithEmptyStrings()
+    public function testWhatHappensWithEmptyStrings()
     {
         $this->assertEquals(__, '');
     }
@@ -78,7 +78,7 @@ class TrueAndFalseKoans extends TestCase
     /**
      * @testdox Is 0 false?
      */
-    public function testWhatHappenWithCero()
+    public function testWhatHappensWithCero()
     {
         $this->assertEquals(__, 0);
         $this->assertEquals(__, '0');
@@ -87,7 +87,7 @@ class TrueAndFalseKoans extends TestCase
     /**
      * @testdox Is 'false' false?
      */
-    public function testWhatHappenWithStrings()
+    public function testWhatHappensWithStrings()
     {
         $this->assertEquals(__, 'false');
     }
@@ -95,7 +95,7 @@ class TrueAndFalseKoans extends TestCase
     /**
      * @testdox What happen with empty arrays?
      */
-    public function testWhatHappenWithEmptyArrays()
+    public function testWhatHappensWithEmptyArrays()
     {
         $this->assertEquals(__, boolval(array()));
     }
@@ -103,9 +103,8 @@ class TrueAndFalseKoans extends TestCase
     /**
      * @testdox What happen with NULL?
      */
-    public function testWhatHappenWithNull()
+    public function testWhatHappensWithNull()
     {
         $this->assertEquals(__, null);
     }
-
 }
