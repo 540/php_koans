@@ -86,10 +86,10 @@ class CallbackFunctionsKoans extends TestCase
     public function testArrayMap()
     {
         $numbers = [1, 2, 3, 4, 5];
-
         $callback = function($number): int{
             return $number ** 2;
         };
+        
         $result = array_map($callback, $numbers);
 
         $this->assertEquals(__, $result);
