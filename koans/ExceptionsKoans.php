@@ -12,10 +12,12 @@ defined('__') or define('__', null);
 
 class ExceptionsKoans extends TestCase
 {
+    // Resources for learning about Exceptions => https://www.w3schools.com/php/php_exceptions.asp
+
     /**
-     * @testdox Exceptions can be thrown using the `throw` keyword
+     * @test Exceptions can be thrown using the `throw` keyword
      */
-    public function testThrowException()
+    public function useExpectExceptionMessageToMakeSureTheExceptionMessageIsWhatYouExpect()
     {
         $this->expectException(Exception::class);
         $this->expectExceptionMessage(__);
@@ -24,9 +26,9 @@ class ExceptionsKoans extends TestCase
     }
 
     /**
-     * @testdox Catching exceptions using try-catch blocks
+     * @test Catching exceptions using try-catch blocks
      */
-    public function testCatchException()
+    public function useTryCatchStatementToCatchExceptionsAndContinueTheProcess()
     {
         try {
             throw new Exception('Something went wrong');
@@ -36,9 +38,9 @@ class ExceptionsKoans extends TestCase
     }
 
     /**
-     * @testdox Catching multiple exceptions using separate catch blocks
+     * @test Catching multiple exceptions using separate catch blocks
      */
-    public function testCatchMultipleExceptions()
+    public function useTwoCatchBlocksToCatchMultipleExceptions()
     {
         try {
             throw new RuntimeException('Runtime exception occurred');
@@ -50,9 +52,9 @@ class ExceptionsKoans extends TestCase
     }
 
     /**
-     * @testdox Catching multiple exceptions using a single catch block
+     * @test Catching multiple exceptions using a single catch block
      */
-    public function testCatchMultipleExceptionsSingleBlock()
+    public function catchMultipleExceptionsSingleBlockUsingPipes()
     {
         try {
             throw new RuntimeException('Runtime exception occurred');
@@ -64,9 +66,9 @@ class ExceptionsKoans extends TestCase
     }
 
     /**
-     * @testdox The finally block is executed regardless of whether an exception is thrown or caught
+     * @test The finally block is executed regardless of whether an exception is thrown or caught
      */
-    public function testFinallyBlock()
+    public function useFinallyBlockToExecuteSomethingAtTheEndOfTheTryCatchBlock()
     {
         try {
             throw new Exception('Something went wrong');
@@ -78,9 +80,9 @@ class ExceptionsKoans extends TestCase
     }
 
     /**
-     * @testdox Custom exception classes can be defined by extending the base Exception class
+     * @test Custom exception classes can be defined by extending the base Exception class
      */
-    public function testCustomExceptionClass()
+    public function createCustomExceptionsByExtendingTheExceptionClass()
     {
         $this->expectException(CustomGenericException::class);
         $this->expectExceptionMessage(__);
