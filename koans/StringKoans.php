@@ -8,10 +8,12 @@ defined('__') or define('__', null);
 
 class StringKoans extends TestCase
 {
+    // Resources for learning about Strings => https://www.w3schools.com/php/php_string.asp
+
     /**
-     * @testdox Double-quoted strings are strings.
+     * @test You can create strings using double quotes
      */
-    public function testDoubleQuotedStringsAreStrings()
+    public function useDoubleQuotesToCreateStrings()
     {
         $string = "Hello, world.";
 
@@ -20,9 +22,9 @@ class StringKoans extends TestCase
     }
 
     /**
-     * @testdox Single-quoted strings are also strings.
+     * @test You can use single quotes to create strings
      */
-    public function testSingleQuotedStringsAreAlsoStrings()
+    public function useSingleQuotesToCreateStrings()
     {
         $string = 'Goodbye, world.';
 
@@ -30,9 +32,9 @@ class StringKoans extends TestCase
     }
 
     /**
-     * @testdox Use the backslash for escaping quotes in strings.
+     * @test Use the backslash for escaping quotes in strings
      */
-    public function testUseBackslashForEscapingQuotesInStrings()
+    public function useBackslashForEscapingQuotesInStrings()
     {
         $a = "He said, \"Don't\"";
         $b = 'He said, "Don\'t"';
@@ -41,9 +43,9 @@ class StringKoans extends TestCase
     }
 
     /**
-     * @testdox Use single-quotes to create a string that contains double-quotes.
+     * @test Use single-quotes to create a string that contains double-quotes
      */
-    public function testUseSingleQuotesToCreateAStringWithDoubleQuotes()
+    public function useSingleQuotesToCreateAStringWithDoubleQuotes()
     {
         $string = 'He said, "Go Away."';
 
@@ -51,9 +53,9 @@ class StringKoans extends TestCase
     }
 
     /**
-     * @testdox Use double-quotes to create a string that contains single-quotes.
+     * @test Use double-quotes to create a string that contains single-quotes
      */
-    public function testUseDoubleQuotesToCreateAStringWithSingleQuotes()
+    public function useDoubleQuotesToCreateAStringWithSingleQuotes()
     {
         $string = "Don't";
 
@@ -61,9 +63,9 @@ class StringKoans extends TestCase
     }
 
     /**
-     * @testdox Strings can continue onto multiple lines.
+     * @test Strings can continue onto multiple lines
      */
-    public function testStringsCanContinueOntoMultipleLines()
+    public function useMultipleLinesToContinueStrings()
     {
         $string = "It was the best of times,
         It was the worst of times.";
@@ -73,9 +75,9 @@ class StringKoans extends TestCase
     }
 
     /**
-     * @testdox A dot concatenates strings.
+     * @test A dot concatenates strings
      */
-    public function testDotConcatenatesStrings()
+    public function useDotToConcatenateStrings()
     {
         $string = "Hello, " . "World";
 
@@ -83,9 +85,9 @@ class StringKoans extends TestCase
     }
 
     /**
-     * @testdox Dot-concatenation works with variables.
+     * @test Dot-concatenation works with variables
      */
-    public function testDotWorksWithVariables()
+    public function useDotToConcatenateStringsVariables()
     {
         $hi = "Hello, ";
         $there = "World";
@@ -95,9 +97,9 @@ class StringKoans extends TestCase
     }
 
     /**
-     * @testdox Dot-concatenation will not modify the original strings.
+     * @test Dot-concatenation will not modify the original strings
      */
-    public function testDotWillNotModifyOriginalStrings()
+    public function useDotToConcatenateStringsAndTheyWillNotBeModified()
     {
         $hi = "Hello, ";
         $there = "World";
@@ -108,9 +110,9 @@ class StringKoans extends TestCase
     }
 
     /**
-     * @testdox Dot-equals will append to the end of a string.
+     * @test Dot-equals will append to the end of a string
      */
-    public function testDotEqualsAppendsToEndOfString()
+    public function useDotEqualsToAppendTheVariableToTheEndOfAString()
     {
         $hi = "Hello, ";
         $there = "World";
