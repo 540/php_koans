@@ -9,18 +9,18 @@ defined('__') or define('__', null);
 class EmptyIsNullOrIssetKoans extends TestCase
 {
     /**
-     * @testdox is_null return true if variable is null
+     * @test is_null return true if variable is null => https://www.w3schools.com/php/func_var_is_null.asp
      */
-    function testMethodIsNull()
+    public function useIsNullMethodToCheckIfSomethingIsNull()
     {
         $this->assertEquals(__, is_null(null));
         $this->assertEquals(__, is_null(""));
     }
 
     /**
-     * @testdox isset returns true if variable exists and it is not null
+     * @test isset returns true if variable exists and it is not null => https://www.w3schools.com/php/func_var_isset.asp
      */
-    function testMethodIsset()
+    public function useIssetMethodsToCheckIfTheVariableExistsAndItIsNotNull()
     {
         $this->assertEquals(__, isset($something));
 
@@ -32,9 +32,9 @@ class EmptyIsNullOrIssetKoans extends TestCase
     }
 
     /**
-     * @testdox empty returns true if the variable is empty
+     * @test empty returns true if the variable is empty => https://www.w3schools.com/php/func_var_empty.asp
      */
-    function testMethodEmpty()
+    public function useEmptyMethodToCheckIfTheVariableIsEmpty()
     {
         //Working with integers.
         $this->assertEquals(__, empty(0));
