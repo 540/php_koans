@@ -88,7 +88,7 @@ class ClassesKoans extends TestCase
 
         $this->expectException(Error::class);
         $this->expectExceptionMessage('Fix me');
-        $car->secretProperty;
+        $car->privateProperty;
     }
 
     /**
