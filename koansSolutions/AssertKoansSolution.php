@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
 
-class AssertKoans extends TestCase
+class AssertKoansSolution extends TestCase
 {
     // Resources for learning about assertions => https://phpunit.de/manual/6.5/en/appendixes.assertions.html
 
