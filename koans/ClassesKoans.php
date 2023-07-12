@@ -12,10 +12,12 @@ defined('__') or define('__', null);
 
 class ClassesKoans extends TestCase
 {
+    // Resources for learning about Classes and Objects => https://www.w3schools.com/php/php_oop_classes_objects.asp
+
     /**
-     * @testdox Classes can be defined using the `class` keyword and you can create multiple instances of a class (objects)
+     * @test Classes can be defined using the `class` keyword and you can create multiple instances of a class (objects)
      */
-    public function testInstanceOfAClass()
+    public function defineAClassUsingClassKeyword()
     {
         $exampleClass = 'I want to be an object of class ExampleClass';
 
@@ -23,9 +25,9 @@ class ClassesKoans extends TestCase
     }
 
     /**
-     * @testdox Classes can have properties and can only be accessed if they are public
+     * @test Classes can have properties and can only be accessed if they are public https://www.w3schools.com/php/php_oop_access_modifiers.asp
      */
-    public function testClassProperties()
+    public function accessToAPublicProperty()
     {
         $exampleClass = new ExampleClass();
 
@@ -33,9 +35,9 @@ class ClassesKoans extends TestCase
     }
 
     /**
-     * @testdox Methods can be defined in a class
+     * @test Methods can be defined in a class
      */
-    public function testClassMethods()
+    public function useAMethodDefinedInExampleClass()
     {
         $exampleClass = new ExampleClass();
 
@@ -43,9 +45,9 @@ class ClassesKoans extends TestCase
     }
 
     /**
-     * @testdox Classes can have constructors
+     * @test Classes can have constructors => https://www.w3schools.com/php/php_oop_constructor.asp
      */
-    public function testClassConstructor()
+    public function useConstructorToInitializePropertiesUponCreationOfTheObject()
     {
         $car = new Car(__, __);
 
@@ -54,9 +56,9 @@ class ClassesKoans extends TestCase
     }
 
     /**
-     * @testdox Classes can have getters and setters methods to access and set value to properties
+     * @test Classes can have getters and setters methods to access and set value to properties
      */
-    public function testGettersAndSettersMethods()
+    public function useGettersAndSettersToSetAndGetPropertiesValues()
     {
         $car = new Car('yellow', 'Aston Martin');
 
@@ -67,9 +69,9 @@ class ClassesKoans extends TestCase
     }
 
     /**
-     * @testdox Classes can have static properties and methods
+     * @test Classes can have static properties and methods => https://www.w3schools.com/php/php_oop_static_properties.asp
      */
-    public function testStaticPropertiesAndMethods()
+    public function useStaticPropertiesAndMethodsWithoutCreatingAnInstanceOfTheClass()
     {
         Car::$counter++;
 
@@ -78,9 +80,9 @@ class ClassesKoans extends TestCase
     }
 
     /**
-     * @testdox Private methods and properties cannot be accessed directly from outside the class
+     * @test Private methods and properties cannot be accessed directly from outside the class
      */
-    public function testPrivateAccess()
+    public function useTheCorrectExceptionMessageToPassTheTest()
     {
         $car = new Car('yellow', 'Mercedes');
 
@@ -90,9 +92,9 @@ class ClassesKoans extends TestCase
     }
 
     /**
-     * @testdox Protected methods and properties cannot be accessed directly from outside the class
+     * @test Protected methods and properties cannot be accessed directly from outside the class
      */
-    public function testProtectedAccess()
+    public function usePublicMethodsToAccessToProtectedProperties()
     {
         $car = new Car('yellow', 'Mercedes');
 
@@ -100,24 +102,24 @@ class ClassesKoans extends TestCase
     }
 
     /**
-     * @testdox Child classes can inherit properties and methods from their parent class
+     * @test Child classes can inherit properties and methods from their parent class => https://www.w3schools.com/php/php_oop_inheritance.asp
      */
-    public function testInheritance()
+    public function usePublicAndProtectedMethodsAndPropertiesFromParentClassInTheChildClass()
     {
         $sportsCar = new SportCar('blue', 'Toyota');
 
         SportCar::$counter++;
         $sportsCar->setColor('red');
 
-        $this->assertEquals(__,$sportsCar::getCount());
+        $this->assertEquals(__, $sportsCar::getCount());
         $this->assertEquals(__, $sportsCar->color);
         $this->assertEquals(__, $sportsCar->getBrand());
     }
 
     /**
-     * @testdox Child classes can override methods from the parent class
+     * @test Child classes can override methods from the parent class
      */
-    public function testMethodOverride()
+    public function useTheOverridenMethodsInTheChildClass()
     {
         $sportsCar = new SportCar('yellow', 'Ferrari');
 
@@ -126,9 +128,9 @@ class ClassesKoans extends TestCase
     }
 
     /**
-     * @testdox The protected properties and methods are visible in the subclass, but the private ones not
+     * @test The protected properties and methods are visible in the subclass, but the private ones not
      */
-    public function testProtectedInheritance()
+    public function checkIfYouHaveVisibilityOfPrivateAndProtectedPropertiesAndMethodsOfTheParentClassInTheChildClass()
     {
         $sportsCar = new SportCar('yellow', 'Ferrari');
 
