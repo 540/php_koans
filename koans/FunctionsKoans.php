@@ -8,10 +8,12 @@ defined('__') or define('__', null);
 
 class FunctionsKoans extends TestCase
 {
+    // Resources for learning about Functions => https://www.w3schools.com/php/php_functions.asp
+
     /**
-     * @testdox Functions can be defined using the 'function' keyword
+     * @test Functions can be defined using the 'function' keyword
      */
-    public function testMethodDefinition()
+    public function useFunctionKeywordToDefineFunctions()
     {
         function sayHello(): string
         {
@@ -22,9 +24,9 @@ class FunctionsKoans extends TestCase
     }
 
     /**
-     * @testdox Functions can have parameters
+     * @test Functions can have arguments
      */
-    public function testMethodParameters()
+    public function useFunctionsArgumentsToPassInformationToFunctions()
     {
         function add($a, $b): int
         {
@@ -35,9 +37,9 @@ class FunctionsKoans extends TestCase
     }
 
     /**
-     * @testdox Functions can have default parameter values
+     * @test Functions can have default argument values
      */
-    public function testFunctionDefaultParameters()
+    public function useDefaultArgumentsValuesIfYouWantTheArgumentToHaveADefaultBehavior()
     {
         function greet($name = 'Guest'): string
         {
@@ -52,9 +54,9 @@ class FunctionsKoans extends TestCase
     }
 
     /**
-     * @testdox Functions can return multiple values using an array or list
+     * @test Functions can return multiple values using an array or list
      */
-    public function testFunctionMultipleReturnValues()
+    public function useMultipleReturnIfYouWantTheFunctionToReturnMultipleValues()
     {
         function getFullName(): array
         {
@@ -71,9 +73,9 @@ class FunctionsKoans extends TestCase
     }
 
     /**
-     * @testdox Functions can be recursive
+     * @test Functions can be recursive
      */
-    public function testRecursiveFunction()
+    public function useRecursionIfYouWantToCallTheFunctionInsideIt()
     {
         function factorial($n): int
         {
