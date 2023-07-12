@@ -103,7 +103,7 @@ class TrueAndFalseKoans extends TestCase
 
     /**
      * @test
-     * @testdox What happen with empty arrays?
+     * @testdox What happens with empty arrays?
      */
     public function checkIfAnEmptyArrayIsTrue()
     {
@@ -112,7 +112,7 @@ class TrueAndFalseKoans extends TestCase
 
     /**
      * @test
-     * @testdox What happen with NULL?
+     * @testdox What happens with NULL?
      */
     public function checkIfNullIsTrue()
     {
