@@ -106,14 +106,14 @@ class ClassesKoans extends TestCase
      */
     public function usePublicAndProtectedMethodsAndPropertiesFromParentClassInTheChildClass()
     {
-        $sportsCar = new SportCar('blue', 'Toyota');
+        $sportCar = new SportCar('blue', 'Toyota');
 
         SportCar::$counter++;
-        $sportsCar->setColor('red');
+        $sportCar->setColor('red');
 
-        $this->assertEquals(__, $sportsCar::getCount());
-        $this->assertEquals(__, $sportsCar->color);
-        $this->assertEquals(__, $sportsCar->getBrand());
+        $this->assertEquals(__, $sportCar::getCount());
+        $this->assertEquals(__, $sportCar->color);
+        $this->assertEquals(__, $sportCar->getBrand());
     }
 
     /**
@@ -121,10 +121,10 @@ class ClassesKoans extends TestCase
      */
     public function useTheOverridenMethodsInTheChildClass()
     {
-        $sportsCar = new SportCar('yellow', 'Ferrari');
+        $sportCar = new SportCar('yellow', 'Ferrari');
 
-        $this->assertEquals('Engine started', $sportsCar->startEngine());
-        $this->assertEquals('Driving at 200 km/h', $sportsCar->drive(200));
+        $this->assertEquals('Engine started', $sportCar->startEngine());
+        $this->assertEquals('Driving at 200 km/h', $sportCar->drive(200));
     }
 
     /**
@@ -132,9 +132,9 @@ class ClassesKoans extends TestCase
      */
     public function checkIfYouHaveVisibilityOfPrivateAndProtectedPropertiesAndMethodsOfTheParentClassInTheChildClass()
     {
-        $sportsCar = new SportCar('yellow', 'Ferrari');
+        $sportCar = new SportCar('yellow', 'Ferrari');
 
-        $this->assertEquals('This is protected', $sportsCar->getProtectedProperty());
-        $this->assertEquals('Can I change?', $sportsCar->getSecret());
+        $this->assertEquals('This is protected', $sportCar->getProtectedProperty());
+        $this->assertEquals('Can I change?', $sportCar->getSecret());
     }
 }
