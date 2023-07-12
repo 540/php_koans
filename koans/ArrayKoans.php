@@ -8,10 +8,12 @@ defined('__') or define('__', null);
 
 class ArrayKoans extends TestCase
 {
+    // Resources for learning about arrays => https://www.w3schools.com/php/php_arrays.asp
+
     /**
-     * @testdox Index 0 is the first element of an array
+     * @test Index 0 is the first element of an array
      */
-    public function testGetTheValueOfTheFirstElementInAnArray()
+    public function getTheValueOfTheFirstElementInAnArray()
     {
         $cars = array("BMW", "Mercedes", "Aston Martin");
 
@@ -19,9 +21,9 @@ class ArrayKoans extends TestCase
     }
 
     /**
-     * @testdox Use count to calculate array lenght
+     * @test Use count to calculate array lenght
      */
-    public function testArrayLength()
+    public function getTheLengthOfAnArray()
     {
         $fruits = array("Apple", "Banana", "Pineaple", "Cherry");
 
@@ -29,9 +31,9 @@ class ArrayKoans extends TestCase
     }
 
     /**
-     * @testdox Arrays can be of type key=>value
+     * @test Arrays can be of type key=>value => https://www.w3schools.com/php/php_arrays_associative.asp
      */
-    public function testGetTheAgeOnAssociativeArrays()
+    public function getTheAgeOnAssociativeArrays()
     {
         $age = array("Joe"=>"49", "Mike"=>"27", "Charles"=>"32");
 
@@ -40,22 +42,22 @@ class ArrayKoans extends TestCase
     }
 
     /**
-     * @testdox You can iterate through an array using loops
+     * @test You can iterate through an array using loops => https://www.w3schools.com/php/php_looping_foreach.asp
      */
-    public function testForEachOnAssociativeArrays()
+    public function getAllTheValuesOfAnArrayUsingLoops()
     {
         $age = array("Joe"=>"49", "Mike"=>"27", "Charles"=>"32");
 
-        //Create a ForEach Loop to pass the test
+        // Create a ForEach Loop to pass the test
 
-        // Extract the Joe´s Age
+        // Extract Joe´s Age
         $this->assertEquals(__, "Key= Joe, Value= 49 ; Key= Mike, Value= 27 ; Key= Charles, Value= 32 ; ");
     }
 
     /**
-     * @testdox An array can be made up of more arrays
+     * @test An array can be made up of more arrays => https://www.w3schools.com/php/php_arrays_multidimensional.asp
      */
-    public function testMultidimensionalArray()
+    public function getValuesFromAMultidimensionalArray()
     {
         $cars = array (
             array("BMW","Blue","6913 CMC"),
@@ -70,13 +72,13 @@ class ArrayKoans extends TestCase
     }
 
     /**
-     * @testdox You can sort an array in ascending order
+     * @test You can sort an array in ascending order => https://www.w3schools.com/php/php_arrays_sort.asp
      */
-    public function testAscendingOrderOnArray()
+    public function sortAnArrayInAscendingOrder()
     {
         $numbers = array(3,2,2,1);
 
-        //Sort the elements of the $numbers array in ascending order (Hint: There are functions to sort arrays)
+        // Sort the elements of the $numbers array in ascending order (Hint: There are functions to sort arrays)
 
         $this->assertEquals(__,1);
         $this->assertEquals(__,2);
@@ -85,9 +87,9 @@ class ArrayKoans extends TestCase
     }
 
     /**
-     * @testdox You can sort an array in descending order
+     * @test You can sort an array in descending order
      */
-    public function testDescendingOrderOnArray()
+    public function sortAnArrayInDescendingOrder()
     {
         $cars = array("BMW", "Mercedes", "Aston Martin");
 
