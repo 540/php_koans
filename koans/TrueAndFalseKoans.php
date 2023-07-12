@@ -8,11 +8,12 @@ defined('__') or define('__', null);
 
 class TrueAndFalseKoans extends TestCase
 {
+    // Resources for learning about Booleans => https://www.php.net/manual/es/language.types.boolean.php
 
     /**
-     * @testdox 3 and '3' are the same thing, but, the type? (Equal operator)
+     * @test 3 and '3' are the same thing, but, the type? (Equal operator)
      */
-    public function testStringAndIntAreEqualIfYouUseEqualOperator()
+    public function useTheEqualOperatorToCheckIfStringAndIntAreEqual()
     {
         $integer = 3;
         $string = '3';
@@ -21,9 +22,9 @@ class TrueAndFalseKoans extends TestCase
     }
 
     /**
-     * @testdox 3 and '3' are identical, or not? (Identical operator)
+     * @test 3 and '3' are identical, or not? (Identical operator)
      */
-    public function testStringAndIntAreNotIdenticalIfYouUseIdenticalOperator()
+    public function useTheIdenticalOperatorToCheckIfStringAndIntAreIdentical()
     {
         $integer = 3;
         $string = '3';
@@ -32,9 +33,9 @@ class TrueAndFalseKoans extends TestCase
     }
 
     /**
-     * @testdox It's the same with Not Equal Operator
+     * @test It's the same with Not Equal Operator
      */
-    public function testWeCanUseNotEqual()
+    public function useTheNotEqualOperatorToCheckIfStringAndIntAreEqual()
     {
         $integer = 3;
         $string = '3';
@@ -43,9 +44,9 @@ class TrueAndFalseKoans extends TestCase
     }
 
     /**
-     * @testdox What happens if we use Not Identical Operator?
+     * @test What happens if we use Not Identical Operator?
      */
-    public function testWeCanUseNotIdentical()
+    public function useTheNotIdenticalOperatorToCheckIfStringAndIntAreIdentical()
     {
         $integer = 3;
         $string = '3';
@@ -54,9 +55,9 @@ class TrueAndFalseKoans extends TestCase
     }
 
     /**
-     * @testdox There are more comparison operators
+     * @test There are more comparison operators => https://www.w3schools.com/php/php_operators.asp
      */
-    public function testMoreComparisonOperators()
+    public function useMoreComparisonOperators()
     {
         $age = 22;
         $weight = 70;
@@ -68,42 +69,42 @@ class TrueAndFalseKoans extends TestCase
     }
 
     /**
-     * @testdox When you don't say anything are you saying the truth?
+     * @test When you don't say anything are you saying the truth?
      */
-    public function testWhatHappensWithEmptyStrings()
+    public function checkIfAnEmptyStringIsTrue()
     {
         $this->assertEquals(__, '');
     }
 
     /**
-     * @testdox Is 0 false?
+     * @test Is 0 false?
      */
-    public function testWhatHappensWithCero()
+    public function checkIfZeroIsTrue()
     {
         $this->assertEquals(__, 0);
         $this->assertEquals(__, '0');
     }
 
     /**
-     * @testdox Is 'false' false?
+     * @test Is 'false' false?
      */
-    public function testWhatHappensWithStrings()
+    public function checkIfTheStringFalseIsReallyFalse()
     {
         $this->assertEquals(__, 'false');
     }
 
     /**
-     * @testdox What happen with empty arrays?
+     * @test What happen with empty arrays?
      */
-    public function testWhatHappensWithEmptyArrays()
+    public function checkIfAnEmptyArrayIsTrue()
     {
         $this->assertEquals(__, boolval(array()));
     }
 
     /**
-     * @testdox What happen with NULL?
+     * @test What happen with NULL?
      */
-    public function testWhatHappensWithNull()
+    public function checkIfNullIsTrue()
     {
         $this->assertEquals(__, null);
     }
