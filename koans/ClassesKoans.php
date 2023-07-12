@@ -15,7 +15,8 @@ class ClassesKoans extends TestCase
     // Resources for learning about Classes and Objects => https://www.w3schools.com/php/php_oop_classes_objects.asp
 
     /**
-     * @test Classes can be defined using the `class` keyword and you can create multiple instances of a class (objects)
+     * @test
+     * @testdox Classes can be defined using the `class` keyword and you can create multiple instances of a class (objects)
      */
     public function defineAClassUsingClassKeyword()
     {
@@ -25,7 +26,8 @@ class ClassesKoans extends TestCase
     }
 
     /**
-     * @test Classes can have properties and can only be accessed if they are public https://www.w3schools.com/php/php_oop_access_modifiers.asp
+     * @test
+     * @testdox Classes can have properties and can only be accessed if they are public https://www.w3schools.com/php/php_oop_access_modifiers.asp
      */
     public function accessToAPublicProperty()
     {
@@ -35,7 +37,8 @@ class ClassesKoans extends TestCase
     }
 
     /**
-     * @test Methods can be defined in a class
+     * @test
+     * @testdox Methods can be defined in a class
      */
     public function useAMethodDefinedInExampleClass()
     {
@@ -45,7 +48,8 @@ class ClassesKoans extends TestCase
     }
 
     /**
-     * @test Classes can have constructors => https://www.w3schools.com/php/php_oop_constructor.asp
+     * @test
+     * @testdox Classes can have constructors => https://www.w3schools.com/php/php_oop_constructor.asp
      */
     public function useConstructorToInitializePropertiesUponCreationOfTheObject()
     {
@@ -56,7 +60,8 @@ class ClassesKoans extends TestCase
     }
 
     /**
-     * @test Classes can have getters and setters methods to access and set value to properties
+     * @test
+     * @testdox Classes can have getters and setters methods to access and set value to properties
      */
     public function useGettersAndSettersToSetAndGetPropertiesValues()
     {
@@ -69,7 +74,8 @@ class ClassesKoans extends TestCase
     }
 
     /**
-     * @test Classes can have static properties and methods => https://www.w3schools.com/php/php_oop_static_properties.asp
+     * @test
+     * @testdox Classes can have static properties and methods => https://www.w3schools.com/php/php_oop_static_properties.asp
      */
     public function useStaticPropertiesAndMethodsWithoutCreatingAnInstanceOfTheClass()
     {
@@ -80,7 +86,8 @@ class ClassesKoans extends TestCase
     }
 
     /**
-     * @test Private methods and properties cannot be accessed directly from outside the class
+     * @test
+     * @testdox Private methods and properties cannot be accessed directly from outside the class
      */
     public function useTheCorrectExceptionMessageToPassTheTest()
     {
@@ -92,7 +99,8 @@ class ClassesKoans extends TestCase
     }
 
     /**
-     * @test Protected methods and properties cannot be accessed directly from outside the class
+     * @test
+     * @testdox Protected methods and properties cannot be accessed directly from outside the class
      */
     public function usePublicMethodsToAccessToProtectedProperties()
     {
@@ -102,7 +110,8 @@ class ClassesKoans extends TestCase
     }
 
     /**
-     * @test Child classes can inherit properties and methods from their parent class => https://www.w3schools.com/php/php_oop_inheritance.asp
+     * @test
+     * @testdox Child classes can inherit properties and methods from their parent class => https://www.w3schools.com/php/php_oop_inheritance.asp
      */
     public function usePublicAndProtectedMethodsAndPropertiesFromParentClassInTheChildClass()
     {
@@ -117,7 +126,8 @@ class ClassesKoans extends TestCase
     }
 
     /**
-     * @test Child classes can override methods from the parent class
+     * @test
+     * @testdox Child classes can override methods from the parent class
      */
     public function useTheOverridenMethodsInTheChildClass()
     {
@@ -128,7 +138,8 @@ class ClassesKoans extends TestCase
     }
 
     /**
-     * @test The protected properties and methods are visible in the subclass, but the private ones not
+     * @test
+     * @testdox The protected properties and methods are visible in the subclass, but the private ones not
      */
     public function checkIfYouHaveVisibilityOfPrivateAndProtectedPropertiesAndMethodsOfTheParentClassInTheChildClass()
     {

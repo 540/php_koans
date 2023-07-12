@@ -11,7 +11,8 @@ class RegularExpressionsKoans extends TestCase
     // Resources for learning about Regular Expressions => https://www.w3schools.com/php/php_regex.asp
 
     /**
-     * @test preg_match tells you if a string contains matches of a pattern.
+     * @test
+     * @testdox preg_match tells you if a string contains matches of a pattern.
      */
     public function usePregMatchToFindPatternsInAString()
     {
@@ -22,7 +23,8 @@ class RegularExpressionsKoans extends TestCase
     }
 
     /**
-     * @test preg_match_all tells you how many matches were found for a pattern in a string
+     * @test
+     * @testdox preg_match_all tells you how many matches were found for a pattern in a string
      */
     public function usePregMatchAllToKnowHowManyPatternsThereAreInAString()
     {
@@ -33,7 +35,8 @@ class RegularExpressionsKoans extends TestCase
     }
 
     /**
-     * @test preg_replace replaces all of the matches of the pattern in a string with another string
+     * @test
+     * @testdox preg_replace replaces all of the matches of the pattern in a string with another string
      */
     public function usePregReplaceToReplaceAllTheMatchesInAStringWithAnotherString()
     {

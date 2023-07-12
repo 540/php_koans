@@ -15,7 +15,8 @@ class ExceptionsKoans extends TestCase
     // Resources for learning about Exceptions => https://www.w3schools.com/php/php_exceptions.asp
 
     /**
-     * @test Exceptions can be thrown using the `throw` keyword
+     * @test
+     * @testdox Exceptions can be thrown using the `throw` keyword
      */
     public function useExpectExceptionMessageToMakeSureTheExceptionMessageIsWhatYouExpect()
     {
@@ -26,7 +27,8 @@ class ExceptionsKoans extends TestCase
     }
 
     /**
-     * @test Catching exceptions using try-catch blocks
+     * @test
+     * @testdox Catching exceptions using try-catch blocks
      */
     public function useTryCatchStatementToCatchExceptionsAndContinueTheProcess()
     {
@@ -38,7 +40,8 @@ class ExceptionsKoans extends TestCase
     }
 
     /**
-     * @test Catching multiple exceptions using separate catch blocks
+     * @test
+     * @testdox Catching multiple exceptions using separate catch blocks
      */
     public function useTwoCatchBlocksToCatchMultipleExceptions()
     {
@@ -52,7 +55,8 @@ class ExceptionsKoans extends TestCase
     }
 
     /**
-     * @test Catching multiple exceptions using a single catch block
+     * @test
+     * @testdox Catching multiple exceptions using a single catch block
      */
     public function catchMultipleExceptionsSingleBlockUsingPipes()
     {
@@ -66,7 +70,8 @@ class ExceptionsKoans extends TestCase
     }
 
     /**
-     * @test The finally block is executed regardless of whether an exception is thrown or caught
+     * @test
+     * @testdox The finally block is executed regardless of whether an exception is thrown or caught
      */
     public function useFinallyBlockToExecuteSomethingAtTheEndOfTheTryCatchBlock()
     {
@@ -80,7 +85,8 @@ class ExceptionsKoans extends TestCase
     }
 
     /**
-     * @test Custom exception classes can be defined by extending the base Exception class
+     * @test
+     * @testdox Custom exception classes can be defined by extending the base Exception class
      */
     public function createCustomExceptionsByExtendingTheExceptionClass()
     {

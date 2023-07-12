@@ -11,7 +11,8 @@ class FunctionsKoans extends TestCase
     // Resources for learning about Functions => https://www.w3schools.com/php/php_functions.asp
 
     /**
-     * @test Functions can be defined using the 'function' keyword
+     * @test
+     * @testdox Functions can be defined using the 'function' keyword
      */
     public function useFunctionKeywordToDefineFunctions()
     {
@@ -24,7 +25,8 @@ class FunctionsKoans extends TestCase
     }
 
     /**
-     * @test Functions can have arguments
+     * @test
+     * @testdox Functions can have arguments
      */
     public function useFunctionsArgumentsToPassInformationToFunctions()
     {
@@ -37,7 +39,8 @@ class FunctionsKoans extends TestCase
     }
 
     /**
-     * @test Functions can have default argument values
+     * @test
+     * @testdox Functions can have default argument values
      */
     public function useDefaultArgumentsValuesIfYouWantTheArgumentToHaveADefaultBehavior()
     {
@@ -54,7 +57,8 @@ class FunctionsKoans extends TestCase
     }
 
     /**
-     * @test Functions can return multiple values using an array or list
+     * @test
+     * @testdox Functions can return multiple values using an array or list
      */
     public function useMultipleReturnIfYouWantTheFunctionToReturnMultipleValues()
     {
@@ -73,7 +77,8 @@ class FunctionsKoans extends TestCase
     }
 
     /**
-     * @test Functions can be recursive
+     * @test
+     * @testdox Functions can be recursive
      */
     public function useRecursionIfYouWantToCallTheFunctionInsideIt()
     {

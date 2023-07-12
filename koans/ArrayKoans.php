@@ -11,7 +11,8 @@ class ArrayKoans extends TestCase
     // Resources for learning about arrays => https://www.w3schools.com/php/php_arrays.asp
 
     /**
-     * @test Index 0 is the first element of an array
+     * @test
+     * @testdox Index 0 is the first element of an array
      */
     public function getTheValueOfTheFirstElementInAnArray()
     {
@@ -21,7 +22,8 @@ class ArrayKoans extends TestCase
     }
 
     /**
-     * @test Use count to calculate array lenght
+     * @test
+     * @testdox Use count to calculate array lenght
      */
     public function getTheLengthOfAnArray()
     {
@@ -31,7 +33,8 @@ class ArrayKoans extends TestCase
     }
 
     /**
-     * @test Arrays can be of type key=>value => https://www.w3schools.com/php/php_arrays_associative.asp
+     * @test
+     * @testdox Arrays can be of type key=>value => https://www.w3schools.com/php/php_arrays_associative.asp
      */
     public function getTheAgeOnAssociativeArrays()
     {
@@ -42,7 +45,8 @@ class ArrayKoans extends TestCase
     }
 
     /**
-     * @test You can iterate through an array using loops => https://www.w3schools.com/php/php_looping_foreach.asp
+     * @test
+     * @testdox You can iterate through an array using loops => https://www.w3schools.com/php/php_looping_foreach.asp
      */
     public function getAllTheValuesOfAnArrayUsingLoops()
     {
@@ -55,7 +59,8 @@ class ArrayKoans extends TestCase
     }
 
     /**
-     * @test An array can be made up of more arrays => https://www.w3schools.com/php/php_arrays_multidimensional.asp
+     * @test
+     * @testdox An array can be made up of more arrays => https://www.w3schools.com/php/php_arrays_multidimensional.asp
      */
     public function getValuesFromAMultidimensionalArray()
     {
@@ -72,7 +77,8 @@ class ArrayKoans extends TestCase
     }
 
     /**
-     * @test You can sort an array in ascending order => https://www.w3schools.com/php/php_arrays_sort.asp
+     * @test
+     * @testdox You can sort an array in ascending order => https://www.w3schools.com/php/php_arrays_sort.asp
      */
     public function sortAnArrayInAscendingOrder()
     {
@@ -87,7 +93,8 @@ class ArrayKoans extends TestCase
     }
 
     /**
-     * @test You can sort an array in descending order
+     * @test
+     * @testdox You can sort an array in descending order
      */
     public function sortAnArrayInDescendingOrder()
     {

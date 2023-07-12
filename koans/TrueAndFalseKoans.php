@@ -11,7 +11,8 @@ class TrueAndFalseKoans extends TestCase
     // Resources for learning about Booleans => https://www.php.net/manual/es/language.types.boolean.php
 
     /**
-     * @test 3 and '3' are the same thing, but, the type? (Equal operator)
+     * @test
+     * @testdox 3 and '3' are the same thing, but, the type? (Equal operator)
      */
     public function useTheEqualOperatorToCheckIfStringAndIntAreEqual()
     {
@@ -22,7 +23,8 @@ class TrueAndFalseKoans extends TestCase
     }
 
     /**
-     * @test 3 and '3' are identical, or not? (Identical operator)
+     * @test
+     * @testdox 3 and '3' are identical, or not? (Identical operator)
      */
     public function useTheIdenticalOperatorToCheckIfStringAndIntAreIdentical()
     {
@@ -33,7 +35,8 @@ class TrueAndFalseKoans extends TestCase
     }
 
     /**
-     * @test It's the same with Not Equal Operator
+     * @test
+     * @testdox It's the same with Not Equal Operator
      */
     public function useTheNotEqualOperatorToCheckIfStringAndIntAreEqual()
     {
@@ -44,7 +47,8 @@ class TrueAndFalseKoans extends TestCase
     }
 
     /**
-     * @test What happens if we use Not Identical Operator?
+     * @test
+     * @testdox What happens if we use Not Identical Operator?
      */
     public function useTheNotIdenticalOperatorToCheckIfStringAndIntAreIdentical()
     {
@@ -55,7 +59,8 @@ class TrueAndFalseKoans extends TestCase
     }
 
     /**
-     * @test There are more comparison operators => https://www.w3schools.com/php/php_operators.asp
+     * @test
+     * @testdox There are more comparison operators => https://www.w3schools.com/php/php_operators.asp
      */
     public function useMoreComparisonOperators()
     {
@@ -69,7 +74,8 @@ class TrueAndFalseKoans extends TestCase
     }
 
     /**
-     * @test When you don't say anything are you saying the truth?
+     * @test
+     * @testdox When you don't say anything are you saying the truth?
      */
     public function checkIfAnEmptyStringIsTrue()
     {
@@ -77,7 +83,8 @@ class TrueAndFalseKoans extends TestCase
     }
 
     /**
-     * @test Is 0 false?
+     * @test
+     * @testdox Is 0 false?
      */
     public function checkIfZeroIsTrue()
     {
@@ -86,7 +93,8 @@ class TrueAndFalseKoans extends TestCase
     }
 
     /**
-     * @test Is 'false' false?
+     * @test
+     * @testdox Is 'false' false?
      */
     public function checkIfTheStringFalseIsReallyFalse()
     {
@@ -94,7 +102,8 @@ class TrueAndFalseKoans extends TestCase
     }
 
     /**
-     * @test What happen with empty arrays?
+     * @test
+     * @testdox What happen with empty arrays?
      */
     public function checkIfAnEmptyArrayIsTrue()
     {
@@ -102,7 +111,8 @@ class TrueAndFalseKoans extends TestCase
     }
 
     /**
-     * @test What happen with NULL?
+     * @test
+     * @testdox What happen with NULL?
      */
     public function checkIfNullIsTrue()
     {

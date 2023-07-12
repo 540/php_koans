@@ -11,7 +11,8 @@ class StringKoans extends TestCase
     // Resources for learning about Strings => https://www.w3schools.com/php/php_string.asp
 
     /**
-     * @test You can create strings using double quotes
+     * @test
+     * @testdox You can create strings using double quotes
      */
     public function useDoubleQuotesToCreateStrings()
     {
@@ -22,7 +23,8 @@ class StringKoans extends TestCase
     }
 
     /**
-     * @test You can use single quotes to create strings
+     * @test
+     * @testdox You can use single quotes to create strings
      */
     public function useSingleQuotesToCreateStrings()
     {
@@ -32,7 +34,8 @@ class StringKoans extends TestCase
     }
 
     /**
-     * @test Use the backslash for escaping quotes in strings
+     * @test
+     * @testdox Use the backslash for escaping quotes in strings
      */
     public function useBackslashForEscapingQuotesInStrings()
     {
@@ -43,7 +46,8 @@ class StringKoans extends TestCase
     }
 
     /**
-     * @test Use single-quotes to create a string that contains double-quotes
+     * @test
+     * @testdox Use single-quotes to create a string that contains double-quotes
      */
     public function useSingleQuotesToCreateAStringWithDoubleQuotes()
     {
@@ -53,7 +57,8 @@ class StringKoans extends TestCase
     }
 
     /**
-     * @test Use double-quotes to create a string that contains single-quotes
+     * @test
+     * @testdox Use double-quotes to create a string that contains single-quotes
      */
     public function useDoubleQuotesToCreateAStringWithSingleQuotes()
     {
@@ -63,7 +68,8 @@ class StringKoans extends TestCase
     }
 
     /**
-     * @test Strings can continue onto multiple lines
+     * @test
+     * @testdox Strings can continue onto multiple lines
      */
     public function useMultipleLinesToContinueStrings()
     {
@@ -75,7 +81,8 @@ class StringKoans extends TestCase
     }
 
     /**
-     * @test A dot concatenates strings
+     * @test
+     * @testdox A dot concatenates strings
      */
     public function useDotToConcatenateStrings()
     {
@@ -85,7 +92,8 @@ class StringKoans extends TestCase
     }
 
     /**
-     * @test Dot-concatenation works with variables
+     * @test
+     * @testdox Dot-concatenation works with variables
      */
     public function useDotToConcatenateStringsVariables()
     {
@@ -97,7 +105,8 @@ class StringKoans extends TestCase
     }
 
     /**
-     * @test Dot-concatenation will not modify the original strings
+     * @test
+     * @testdox Dot-concatenation will not modify the original strings
      */
     public function useDotToConcatenateStringsAndTheyWillNotBeModified()
     {
@@ -110,7 +119,8 @@ class StringKoans extends TestCase
     }
 
     /**
-     * @test Dot-equals will append to the end of a string
+     * @test
+     * @testdox Dot-equals will append to the end of a string
      */
     public function useDotEqualsToAppendTheVariableToTheEndOfAString()
     {

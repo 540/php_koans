@@ -12,7 +12,8 @@ class DataTypesKoans extends TestCase
     // Resources for learning about Data Types => https://www.w3schools.com/php/php_datatypes.asp
 
     /**
-     * @test A string is a data type that is used to represent text
+     * @test
+     * @testdox A string is a data type that is used to represent text
      */
     public function createStringUsingSingleOrDoubleQuotes()
     {
@@ -22,7 +23,8 @@ class DataTypesKoans extends TestCase
     }
 
     /**
-     * @test Integers are numbers without decimals
+     * @test
+     * @testdox Integers are numbers without decimals
      */
     public function createIntUsingNumbersWithoutDecimals()
     {
@@ -32,7 +34,8 @@ class DataTypesKoans extends TestCase
     }
 
     /**
-     * @test Floats are numbers with decimal points
+     * @test
+     * @testdox Floats are numbers with decimal points
      */
     public function createFloatUsingNumbersWithDecimalPoints()
     {
@@ -42,7 +45,8 @@ class DataTypesKoans extends TestCase
     }
 
     /**
-     * @test Booleans represent true or false values
+     * @test
+     * @testdox Booleans represent true or false values
      */
     public function createBooleansUsingTrueOrFalse()
     {
@@ -56,7 +60,8 @@ class DataTypesKoans extends TestCase
     }
 
     /**
-     * @test Arrays can hold multiple values
+     * @test
+     * @testdox Arrays can hold multiple values
      */
     public function createArrayUsingBracketsOrArrayKeyword()
     {
@@ -67,7 +72,8 @@ class DataTypesKoans extends TestCase
     }
 
     /**
-     * @test Objects are instances of classes
+     * @test
+     * @testdox Objects are instances of classes
      */
     public function createObjectsUsingNewKeyword()
     {
@@ -77,7 +83,8 @@ class DataTypesKoans extends TestCase
     }
 
     /**
-     * @test Null represents the absence of a value
+     * @test
+     * @testdox Null represents the absence of a value
      */
     public function createNullUsingNullKeyword()
     {
@@ -87,7 +94,8 @@ class DataTypesKoans extends TestCase
     }
 
     /**
-     * @test Resources represent external resources (e.g., database connections, files...)
+     * @test
+     * @testdox Resources represent external resources (e.g., database connections, files...)
      */
     public function checkIfOurComposerFileIsAResource()
     {

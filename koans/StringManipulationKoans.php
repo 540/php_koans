@@ -8,7 +8,8 @@ defined('__') or define('__', null);
 class StringManipulationKoans extends TestCase
 {
     /**
-     * @test You can interpolate variables in a double-quoted string
+     * @test
+     * @testdox You can interpolate variables in a double-quoted string
      */
     public function useStringInterpolationInDoubleQuotedString()
     {
@@ -19,7 +20,8 @@ class StringManipulationKoans extends TestCase
     }
 
     /**
-     * @test You cannot interpolate variables in a single-quoted string
+     * @test
+     * @testdox You cannot interpolate variables in a single-quoted string
      */
     public function stringInterpolationWillNotWorkInSingleQuotedString()
     {
@@ -30,7 +32,8 @@ class StringManipulationKoans extends TestCase
     }
 
     /**
-     * @test Another option for variable interpolation in a double-quoted string is with curly brackets
+     * @test
+     * @testdox Another option for variable interpolation in a double-quoted string is with curly brackets
      */
     public function useStringInterpolationWithCurlyBrackets()
     {
@@ -41,7 +44,8 @@ class StringManipulationKoans extends TestCase
     }
 
     /**
-     * @test If one wants to interpolate associative array elements, one must use curly brackets
+     * @test
+     * @testdox If one wants to interpolate associative array elements, one must use curly brackets
      */
     public function interpolatingAssociativeArrayElementsMustBeInCurlyBrackets()
     {
@@ -52,7 +56,8 @@ class StringManipulationKoans extends TestCase
     }
 
     /**
-     * @test Heredoc interpolates like a double-quoted string
+     * @test
+     * @testdox Heredoc interpolates like a double-quoted string
      */
     public function heredocInterpolatesLikeADoubleQuotedString()
     {
@@ -66,7 +71,8 @@ class StringManipulationKoans extends TestCase
     }
 
     /**
-     * @test Nowdoc interpolates like a single-quoted string
+     * @test
+     * @testdox Nowdoc interpolates like a single-quoted string
      */
     public function nowdocInterpolatesLikeASingleQuotedString()
     {
@@ -80,7 +86,8 @@ class StringManipulationKoans extends TestCase
     }
 
     /**
-     * @test You can format a string using sprintf
+     * @test
+     * @testdox You can format a string using sprintf
      */
     public function useStringFormattingWithSprintf()
     {
@@ -92,7 +99,8 @@ class StringManipulationKoans extends TestCase
     }
 
     /**
-     * @test When formatting a string with sprintf, use different type specifiers for the different types of variables
+     * @test
+     * @testdox When formatting a string with sprintf, use different type specifiers for the different types of variables
      */
     public function stringFormattingWithSprintfWithTypeSpecifiers()
     {
@@ -107,7 +115,8 @@ class StringManipulationKoans extends TestCase
     }
 
     /**
-     * @test Complex string formatting can be done with sprintf
+     * @test
+     * @testdox Complex string formatting can be done with sprintf
      */
     public function useComplexStringFormattingWithSprintf()
     {
@@ -127,7 +136,8 @@ class StringManipulationKoans extends TestCase
     }
 
     /**
-     * @test You can extract a substring from another string
+     * @test
+     * @testdox You can extract a substring from another string
      */
     public function extractAStringFromAString()
     {
@@ -137,7 +147,8 @@ class StringManipulationKoans extends TestCase
     }
 
     /**
-     * @test You can get a single character from a string using an array index
+     * @test
+     * @testdox You can get a single character from a string using an array index
      */
     public function getASingleCharacterFromAString()
     {
@@ -147,7 +158,8 @@ class StringManipulationKoans extends TestCase
     }
 
     /**
-     * @test Strings can be split
+     * @test
+     * @testdox Strings can be split
      */
     public function splitTheStringIntoAnArray()
     {
@@ -158,7 +170,8 @@ class StringManipulationKoans extends TestCase
     }
 
     /**
-     * @test Strings can be joined
+     * @test
+     * @testdox Strings can be joined
      */
     public function joinTheArrayInAString()
     {
@@ -169,7 +182,8 @@ class StringManipulationKoans extends TestCase
     }
 
     /**
-     * @test You can change the case of strings
+     * @test
+     * @testdox You can change the case of strings
      */
     public function changeTheCaseOfTheStrings()
     {
