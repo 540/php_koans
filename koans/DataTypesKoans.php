@@ -9,10 +9,12 @@ defined('__') or define('__', null);
 
 class DataTypesKoans extends TestCase
 {
+    // Resources for learning about Data Types => https://www.w3schools.com/php/php_datatypes.asp
+
     /**
-     * @testdox A string is a data type that is used to represent text
+     * @test A string is a data type that is used to represent text
      */
-    public function testCreateStringUsingSingleOrDoubleQuotes()
+    public function createStringUsingSingleOrDoubleQuotes()
     {
         $string = 3;
 
@@ -20,9 +22,9 @@ class DataTypesKoans extends TestCase
     }
 
     /**
-     * @testdox Integers are numbers without decimals
+     * @test Integers are numbers without decimals
      */
-    public function testCreateIntUsingNumbersWithoutDecimals()
+    public function createIntUsingNumbersWithoutDecimals()
     {
         $integer = 'I want to be an int';
 
@@ -30,9 +32,9 @@ class DataTypesKoans extends TestCase
     }
 
     /**
-     * @testdox Floats are numbers with decimal points
+     * @test Floats are numbers with decimal points
      */
-    public function testCreateFloatUsingNumbersWithDecimalPoints()
+    public function createFloatUsingNumbersWithDecimalPoints()
     {
         $float = 1;
 
@@ -40,9 +42,9 @@ class DataTypesKoans extends TestCase
     }
 
     /**
-     * @testdox Booleans represent true or false values
+     * @test Booleans represent true or false values
      */
-    public function testCreateBooleansUsingTrueOrFalse()
+    public function createBooleansUsingTrueOrFalse()
     {
         $booleanTrue = true;
         $booleanFalse = false;
@@ -54,9 +56,9 @@ class DataTypesKoans extends TestCase
     }
 
     /**
-     * @testdox Arrays can hold multiple values
+     * @test Arrays can hold multiple values
      */
-    public function testCreateArrayUsingBrackets()
+    public function createArrayUsingBracketsOrArrayKeyword()
     {
         $array = [1, 2, 3];
 
@@ -65,9 +67,9 @@ class DataTypesKoans extends TestCase
     }
 
     /**
-     * @testdox Objects are instances of classes
+     * @test Objects are instances of classes
      */
-    public function testObjects()
+    public function createObjectsUsingNewKeyword()
     {
         $object = new stdClass();
 
@@ -75,9 +77,9 @@ class DataTypesKoans extends TestCase
     }
 
     /**
-     * @testdox Null represents the absence of a value
+     * @test Null represents the absence of a value
      */
-    public function testNull()
+    public function createNullUsingNullKeyword()
     {
         $null = null;
 
@@ -85,9 +87,9 @@ class DataTypesKoans extends TestCase
     }
 
     /**
-     * @testdox Resources represent external resources (e.g., database connections, files...)
+     * @test Resources represent external resources (e.g., database connections, files...)
      */
-    public function testResources()
+    public function checkIfOurComposerFileIsAResource()
     {
         $resource = fopen('composer.json', 'r');
 
