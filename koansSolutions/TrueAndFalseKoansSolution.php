@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
 
-class TrueAndFalseKoans extends TestCase
+class TrueAndFalseKoansSolution extends TestCase
 {
     // Resources for learning about Booleans => https://www.php.net/manual/es/language.types.boolean.php
 
@@ -19,7 +19,7 @@ class TrueAndFalseKoans extends TestCase
         $integer = 3;
         $string = '3';
 
-        $this->assertEquals(__, $integer == $string);
+        $this->assertEquals(true, $integer == $string);
     }
 
     /**
@@ -31,7 +31,7 @@ class TrueAndFalseKoans extends TestCase
         $integer = 3;
         $string = '3';
 
-        $this->assertEquals(true, $integer === $string);
+        $this->assertEquals(false, $integer === $string);
     }
 
     /**
@@ -43,7 +43,7 @@ class TrueAndFalseKoans extends TestCase
         $integer = 3;
         $string = '3';
 
-        $this->assertEquals(true, $integer != $string);
+        $this->assertEquals(false, $integer != $string);
     }
 
     /**
@@ -55,7 +55,7 @@ class TrueAndFalseKoans extends TestCase
         $integer = 3;
         $string = '3';
 
-        $this->assertEquals(false, $integer !== $string);
+        $this->assertEquals(true, $integer !== $string);
     }
 
     /**
@@ -68,9 +68,9 @@ class TrueAndFalseKoans extends TestCase
         $weight = 70;
         $wingspan = 70;
 
-        $this->assertEquals(__, $age > $weight);
-        $this->assertEquals(__, $age <= $wingspan);
-        $this->assertEquals(__, $wingspan >= $weight);
+        $this->assertEquals(false, $age > $weight);
+        $this->assertEquals(true, $age <= $wingspan);
+        $this->assertEquals(true, $wingspan >= $weight);
     }
 
     /**
@@ -79,7 +79,7 @@ class TrueAndFalseKoans extends TestCase
      */
     public function checkIfAnEmptyStringIsTrue()
     {
-        $this->assertEquals(__, '');
+        $this->assertEquals(false, '');
     }
 
     /**
@@ -88,8 +88,8 @@ class TrueAndFalseKoans extends TestCase
      */
     public function checkIfZeroIsTrue()
     {
-        $this->assertEquals(__, 0);
-        $this->assertEquals(__, '0');
+        $this->assertEquals(false, 0);
+        $this->assertEquals(false, '0');
     }
 
     /**
@@ -98,7 +98,7 @@ class TrueAndFalseKoans extends TestCase
      */
     public function checkIfTheStringFalseIsReallyFalse()
     {
-        $this->assertEquals(__, 'false');
+        $this->assertEquals(true, 'false');
     }
 
     /**
@@ -107,7 +107,7 @@ class TrueAndFalseKoans extends TestCase
      */
     public function checkIfAnEmptyArrayIsTrue()
     {
-        $this->assertEquals(__, boolval(array()));
+        $this->assertEquals(false, boolval(array()));
     }
 
     /**
@@ -116,6 +116,6 @@ class TrueAndFalseKoans extends TestCase
      */
     public function checkIfNullIsTrue()
     {
-        $this->assertEquals(__, null);
+        $this->assertEquals(false, null);
     }
 }
