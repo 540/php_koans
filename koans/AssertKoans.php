@@ -7,67 +7,66 @@ defined('__') or define('__', null);
 
 class AssertKoans extends TestCase
 {
+    // Resources for learning about assertions => https://phpunit.de/manual/6.5/en/appendixes.assertions.html
+
     /**
-     * @testdox We shall contemplate truth by testing reality, via asserts.
+     * @test We shall contemplate truth by testing reality, via asserts
      */
-    public function testAssertTruth()
+    public function checksThatTheAssertConditionIsTrue()
     {
-        // Change "false" to "true"
         $this->assertTrue(false);
     }
 
     /**
-     * @testdox Enlightenment may be more easily achieved with appropriate messages.
+     * @test Enlightenment may be more easily achieved with appropriate messages
      */
-    public function testAssertWithMessage()
+    public function checksIfANonEmptyArrayIsFalse()
     {
-        // Change "false" to "true"
         $this->assertTrue(false, "This should be True, please fix this");
     }
 
     /**
-     * @testdox Sometimes we will ask you to fill in the values.
+     * @test You can use assertEquals to check that two things are equal
      */
-    public function testFillInValues()
+    public function checksHowMuchIsOnePlusOne()
     {
-        // Replace __ with your answer
-        $this->assertEquals(__, 1+1);
+        $this->assertEquals(__, 1 + 1);
     }
 
     /**
-     * @testdox To understand reality, we must compare our expectations against reality.
+     * @test To understand reality, we must compare our expectations against reality
      */
-    public function testAssertEquality()
+    public function checksHowMuchIsOnePlusOneUsingVariables()
     {
-        $expected_value = __; // Replace __ with your answer
-        $actual_value = 1 + 1;
+        $expectedValue = __;
+        $actualValue = 1 + 1;
 
-        $this->assertTrue($expected_value == $actual_value);
+        $this->assertTrue($expectedValue == $actualValue);
     }
 
     /**
-     * @testdox Some ways of asserting equality are better than others.
+     * @test Some ways of asserting equality are better than others
      */
-    public function testABetterWayToAssertEquality()
+    public function checksHowMuchIsOnePlusOneUsingVariablesAndAssertEquals()
     {
-        $expected_value = __; // Replace __ with your answer
-        $actual_value = 1 + 1;
+        $expectedValue = __;
+        $actualValue = 1 + 1;
 
-        $this->assertEquals($expected_value, $actual_value);
+        $this->assertEquals($expectedValue, $actualValue);
     }
 
     /**
-     * @testdox Sometimes we need to know the variable type.
+     * @test Sometimes we need to know the variable type
      */
-    public function testSometimesWeNeedToKnowTheVariableType()
+    public function checksTheTypeOfAString()
     {
         $this->assertEquals(__, gettype("What am I"));
     }
 
     /**
-     * @testdox Sometimes we need to know the class type.
+     * @test Sometimes we need to know the class type
      */
-    public function testSometimesWeNeedToKnowTheClassType()
+    public function checksTheTypeOfAClass()
     {
         // See bottom of this file for class definition
         $object = new Enlightenment();
