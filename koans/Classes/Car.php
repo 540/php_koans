@@ -28,7 +28,7 @@ class Car
 
     public function getSecret(): string
     {
-        return $this->secretProperty;
+        return $this->privateProperty;
     }
 
     public function getProtectedProperty(): string
