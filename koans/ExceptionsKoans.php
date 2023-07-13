@@ -18,7 +18,7 @@ class ExceptionsKoans extends TestCase
      * @test
      * @testdox Exceptions can be thrown using the `throw` keyword
      */
-    public function useExpectExceptionMessageToMakeSureTheExceptionMessageIsWhatYouExpect()
+    public function useExpectExceptionMessage()
     {
         $this->expectException(Exception::class);
         $this->expectExceptionMessage(__);

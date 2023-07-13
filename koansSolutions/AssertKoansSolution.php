@@ -14,7 +14,7 @@ class AssertKoansSolution extends TestCase
      * @test
      * @testdox We shall contemplate truth by testing reality, via asserts
      */
-    public function checksThatTheAssertConditionIsTrue()
+    public function checkThatTheAssertConditionIsTrue()
     {
         $this->assertTrue(true);
     }
@@ -23,7 +23,7 @@ class AssertKoansSolution extends TestCase
      * @test
      * @testdox Enlightenment may be more easily achieved with appropriate messages
      */
-    public function checksIfANonEmptyArrayIsFalse()
+    public function checkIfANonEmptyArrayIsFalse()
     {
         $this->assertTrue(true, "This should be True, please fix this");
     }
@@ -32,7 +32,7 @@ class AssertKoansSolution extends TestCase
      * @test
      * @testdox You can use assertEquals to check that two things are equal
      */
-    public function checksHowMuchIsOnePlusOne()
+    public function checkHowMuchIsOnePlusOne()
     {
         $this->assertEquals(2, 1 + 1);
     }
@@ -41,7 +41,7 @@ class AssertKoansSolution extends TestCase
      * @test
      * @testdox To understand reality, we must compare our expectations against reality
      */
-    public function checksHowMuchIsOnePlusOneUsingVariables()
+    public function checkHowMuchIsOnePlusOneUsingVariables()
     {
         $expectedValue = 2;
         $actualValue = 1 + 1;
@@ -53,7 +53,7 @@ class AssertKoansSolution extends TestCase
      * @test
      * @testdox Some ways of asserting equality are better than others
      */
-    public function checksHowMuchIsOnePlusOneUsingVariablesAndAssertEquals()
+    public function checkHowMuchIsOnePlusOneUsingVariablesAndAssertEquals()
     {
         $expectedValue = 2;
         $actualValue = 1 + 1;
@@ -65,7 +65,7 @@ class AssertKoansSolution extends TestCase
      * @test
      * @testdox Sometimes we need to know the variable type
      */
-    public function checksTheTypeOfAString()
+    public function checkTheTypeOfAString()
     {
         $this->assertEquals(gettype('You are a string'), gettype("What am I"));
     }
@@ -74,7 +74,7 @@ class AssertKoansSolution extends TestCase
      * @test
      * @testdox Sometimes we need to know the class type
      */
-    public function checksTheTypeOfAClass()
+    public function checkTheTypeOfAClass()
     {
         // See bottom of this file for class definition
         $object = new Enlightenment();

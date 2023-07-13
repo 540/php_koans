@@ -51,7 +51,7 @@ class ClassesKoans extends TestCase
      * @test
      * @testdox Classes can have constructors => https://www.w3schools.com/php/php_oop_constructor.asp
      */
-    public function useConstructorToInitializePropertiesUponCreationOfTheObject()
+    public function initializePropertiesWithConstructor()
     {
         $car = new Car(__, __);
 
@@ -77,7 +77,7 @@ class ClassesKoans extends TestCase
      * @test
      * @testdox Classes can have static properties and methods => https://www.w3schools.com/php/php_oop_static_properties.asp
      */
-    public function useStaticPropertiesAndMethodsWithoutCreatingAnInstanceOfTheClass()
+    public function useStaticPropsAndMethodsWithNoInstance()
     {
         Car::$counter++;
 
@@ -113,7 +113,7 @@ class ClassesKoans extends TestCase
      * @test
      * @testdox Child classes can inherit properties and methods from their parent class => https://www.w3schools.com/php/php_oop_inheritance.asp
      */
-    public function usePublicAndProtectedMethodsAndPropertiesFromParentClassInTheChildClass()
+    public function useInheritedPublicProtectedPropsMethods()
     {
         $sportCar = new SportCar('blue', 'Toyota');
 
@@ -141,7 +141,7 @@ class ClassesKoans extends TestCase
      * @test
      * @testdox The protected properties and methods are visible in the subclass, but the private ones not
      */
-    public function checkIfYouHaveVisibilityOfPrivateAndProtectedPropertiesAndMethodsOfTheParentClassInTheChildClass()
+    public function checkVisibilityOfInheritedPrivateProtectedPropsAndMethods()
     {
         $sportCar = new SportCar('yellow', 'Ferrari');
 

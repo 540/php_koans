@@ -42,7 +42,7 @@ class FunctionsKoans extends TestCase
      * @test
      * @testdox Functions can have default argument values
      */
-    public function useDefaultArgumentsValuesIfYouWantTheArgumentToHaveADefaultBehavior()
+    public function useDefaultArgumentsValues()
     {
         function greet($name = 'Guest'): string
         {
@@ -60,7 +60,7 @@ class FunctionsKoans extends TestCase
      * @test
      * @testdox Functions can return multiple values using an array or list
      */
-    public function useMultipleReturnIfYouWantTheFunctionToReturnMultipleValues()
+    public function useMultipleReturnToReturnMultipleValues()
     {
         function getFullName(): array
         {
@@ -80,7 +80,7 @@ class FunctionsKoans extends TestCase
      * @test
      * @testdox Functions can be recursive
      */
-    public function useRecursionIfYouWantToCallTheFunctionInsideIt()
+    public function useRecursionToCallTheFunctionInsideIt()
     {
         function factorial($n): int
         {
