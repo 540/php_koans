@@ -3,9 +3,9 @@
 namespace PhpKoans;
 
 use Error;
-use PhpKoans\Classes\Car;
-use PhpKoans\Classes\ExampleClass;
-use PhpKoans\Classes\SportCar;
+use PhpKoans\koansResources\Classes\Car;
+use PhpKoans\koansResources\Classes\ExampleClass;
+use PhpKoans\koansResources\Classes\SportCar;
 use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);

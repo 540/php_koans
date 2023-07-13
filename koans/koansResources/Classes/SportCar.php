@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpKoans\Classes;
+namespace PhpKoans\koansResources\Classes;
 
 class SportCar extends Car
 {

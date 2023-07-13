@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpKoans\Exceptions;
+namespace PhpKoans\koansResources\Exceptions;
 
 use Exception;
 

@@ -4,7 +4,7 @@ namespace PhpKoans;
 
 use Exception;
 use LogicException;
-use PhpKoans\Exceptions\CustomGenericException;
+use PhpKoans\koansResources\Exceptions\CustomGenericException;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
 

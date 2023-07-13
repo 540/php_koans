@@ -1,7 +1,7 @@
 <?php
 namespace PhpKoans;
 
-use PhpKoans\Classes\Enlightenment;
+use PhpKoans\koansResources\Classes\Enlightenment;
 use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
