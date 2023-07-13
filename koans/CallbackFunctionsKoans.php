@@ -2,17 +2,20 @@
 
 namespace PhpKoans;
 
-use PhpKoans\Classes\Greeting;
+use PhpKoans\koansResources\Classes\Greeting;
 use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
 
 class CallbackFunctionsKoans extends TestCase
 {
+    // Resources for learning about callbacks => https://www.php.net/manual/en/language.types.callable.php
+
     /**
+     * @test
      * @testdox Callback functions can be invoked using the `call_user_func()` function
      */
-    public function testInvokeCallbackFunction()
+    public function invokeCallbackFunction()
     {
         $callback = function ($name): string {
             return 'Hello, ' . $name . '!';
@@ -24,9 +27,10 @@ class CallbackFunctionsKoans extends TestCase
     }
 
     /**
+     * @test
      * @testdox Callback functions can also be invoked using the `()` syntax
      */
-    public function testInvokeCallbackFunctionWithParentheses()
+    public function invokeCallbackFunctionWithParentheses()
     {
         $callback = function ($name): string {
             return 'Hello, ' . $name . '!';
@@ -38,14 +42,14 @@ class CallbackFunctionsKoans extends TestCase
     }
 
     /**
+     * @test
      * @testdox Callback functions can accept other functions as arguments
      */
-    public function testAcceptFunctionAsArgument()
+    public function acceptFunctionAsArgument()
     {
         $callback = function ($name, $greetingFunction): string {
             return $greetingFunction($name);
         };
-
         $greeting = function ($name): string {
             return 'Hello, ' . $name . '!';
         };
@@ -56,9 +60,10 @@ class CallbackFunctionsKoans extends TestCase
     }
 
     /**
+     * @test
      * @testdox Callback functions can be defined as static methods of a class
      */
-    public function testDefineStaticCallbackMethod()
+    public function defineStaticCallbackMethod()
     {
         $callback = [new Greeting(), 'greet'];
 
@@ -68,9 +73,10 @@ class CallbackFunctionsKoans extends TestCase
     }
 
     /**
+     * @test
      * @testdox Callback functions can be defined as instance methods of an object
      */
-    public function testDefineInstanceCallbackMethod()
+    public function defineInstanceCallbackMethod()
     {
         $greeting = new Greeting();
         $callback = [$greeting, 'greet'];
@@ -81,9 +87,10 @@ class CallbackFunctionsKoans extends TestCase
     }
 
     /**
-     * @testdox The `array_map()` function applies a callback function to each element of an array
+     * @test
+     * @testdox The `array_map()` function applies a callback function to each element of an array => https://www.w3schools.com/php/func_array_map.asp
      */
-    public function testArrayMap()
+    public function useArrayMapToChangeAnArrayUsingAFunction()
     {
         $numbers = [1, 2, 3, 4, 5];
         $callback = function($number): int{
@@ -96,9 +103,10 @@ class CallbackFunctionsKoans extends TestCase
     }
 
     /**
+     * @test
      * @testdox The implementation of the callback function can be passed to array_map() as an argument
      */
-    public function testArrayMapWithCallbackImplementationAsArgument()
+    public function useArrayMapWithCallbackImplementationAsArgument()
     {
         $numbers = [1, 2, 3, 4, 5];
 
@@ -110,9 +118,10 @@ class CallbackFunctionsKoans extends TestCase
     }
 
     /**
-     * @testdox The `array_filter()` function filters elements of an array using a callback function
+     * @test
+     * @testdox The `array_filter()` function filters elements of an array using a callback function => https://www.w3schools.com/php/func_array_filter.asp
      */
-    public function testArrayFilter()
+    public function useArrayFilterToFilterAnArrayUsingAFunction()
     {
         $numbers = [0=>1, 1=>2, 2=>3, 3=>4, 4=>5];
 
