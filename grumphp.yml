@@ -3,13 +3,6 @@ grumphp:
         enabled: true
         fix_by_default: true
     tasks:
-        phpunit:
-            config_file: ~
-            testsuite: ~
-            group: [ ]
-            exclude_group: [ ]
-            always_execute: false
-            order: null
         phpmd:
             whitelist_patterns: [ ]
             exclude: [ ]

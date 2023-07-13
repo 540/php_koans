@@ -8,7 +8,6 @@ defined('__') or define('__', null);
 
 class TrueAndFalseKoans extends TestCase
 {
-
     /**
      * @testdox 3 and '3' are the same thing, but, the type? (Equal operator)
      */
