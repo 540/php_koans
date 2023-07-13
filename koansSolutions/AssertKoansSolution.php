@@ -1,7 +1,7 @@
 <?php
 namespace PhpKoans;
 
-use PhpParser\Node\Scalar\String_;
+use PhpKoans\Classes\Enlightenment;
 use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
@@ -82,15 +82,3 @@ class AssertKoansSolution extends TestCase
         $this->assertEquals(Enlightenment::class, get_class($object));
     }
 }
-
-// phpcs:disable
-/**
- * Empty class for testThatSometimesWeNeedToKnowTheClassType()
- */
-class Enlightenment {
-    /**
-     * Important: This class is within the PhpKoans namespace.
-     * That means that the FQCN ("fully qualified class name") starts with "PhpKoans\"
-     */
-};
-// phpcs:enable

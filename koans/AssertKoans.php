@@ -1,6 +1,7 @@
 <?php
 namespace PhpKoans;
 
+use PhpKoans\Classes\Enlightenment;
 use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
@@ -81,15 +82,3 @@ class AssertKoans extends TestCase
         $this->assertEquals(__, get_class($object));
     }
 }
-
-// phpcs:disable
-/**
- * Empty class for testThatSometimesWeNeedToKnowTheClassType()
- */
-class Enlightenment {
-    /**
-     * Important: This class is within the PhpKoans namespace.
-     * That means that the FQCN ("fully qualified class name") starts with "PhpKoans\"
-     */
-};
-// phpcs:enable
