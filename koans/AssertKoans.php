@@ -40,7 +40,7 @@ class AssertKoans extends TestCase
      * @test
      * @testdox To understand reality, we must compare our expectations against reality
      */
-    public function checksHowMuchIsOnePlusOneUsingVariables()
+    public function checkIfTwoVariablesAreEqualUsingAssertTrue()
     {
         $expectedValue = __;
         $actualValue = 1 + 1;
@@ -52,7 +52,7 @@ class AssertKoans extends TestCase
      * @test
      * @testdox Some ways of asserting equality are better than others
      */
-    public function checksHowMuchIsOnePlusOneUsingVariablesAndAssertEquals()
+    public function checkIfTwoVariablesAreEqualUsingAssertEquals()
     {
         $expectedValue = __;
         $actualValue = 1 + 1;
