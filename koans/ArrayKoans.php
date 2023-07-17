@@ -55,7 +55,7 @@ class ArrayKoans extends TestCase
         // Create a ForEach Loop to pass the test
 
         // Extract Joe´s Age
-        $this->assertEquals(__, "Key= Joe, Value= 49 ; Key= Mike, Value= 27 ; Key= Charles, Value= 32 ; ");
+        $this->assertEquals(__, "Key = Joe, Value= 49 ; Key = Mike, Value = 27 ; Key = Charles, Value = 32 ; ");
     }
 
     /**

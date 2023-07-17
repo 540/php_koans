@@ -55,11 +55,11 @@ class ArrayKoansSolution extends TestCase
         // Create a ForEach Loop to pass the test
         $result = '';
         foreach ($age as $key => $value){
-            $result .= "Key= $key, Value= $value ; ";
+            $result .= "Key = $key, Value = $value ; ";
         }
 
         // Extract Joe´s Age
-        $this->assertEquals($result, "Key= Joe, Value= 49 ; Key= Mike, Value= 27 ; Key= Charles, Value= 32 ; ");
+        $this->assertEquals($result, "Key = Joe, Value = 49 ; Key = Mike, Value = 27 ; Key = Charles, Value = 32 ; ");
     }
 
     /**
