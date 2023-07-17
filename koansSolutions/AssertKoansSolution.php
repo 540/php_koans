@@ -1,12 +1,12 @@
 <?php
 namespace PhpKoans;
 
-use koansResources\Classes\Enlightenment;
+use PhpKoans\koansResources\Classes\Enlightenment;
 use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
 
-class AssertKoans extends TestCase
+class AssertKoansSolution extends TestCase
 {
     // Resources for learning about assertions => https://phpunit.de/manual/6.5/en/appendixes.assertions.html
 
@@ -16,7 +16,7 @@ class AssertKoans extends TestCase
      */
     public function checkThatTheAssertConditionIsTrue()
     {
-        $this->assertTrue(false);
+        $this->assertTrue(true);
     }
 
     /**
@@ -25,7 +25,7 @@ class AssertKoans extends TestCase
      */
     public function checkIfANonEmptyArrayIsFalse()
     {
-        $this->assertTrue(false, "This should be True, please fix this");
+        $this->assertTrue(true, "This should be True, please fix this");
     }
 
     /**
@@ -34,7 +34,7 @@ class AssertKoans extends TestCase
      */
     public function checkHowMuchIsOnePlusOne()
     {
-        $this->assertEquals(__, 1 + 1);
+        $this->assertEquals(2, 1 + 1);
     }
 
     /**
@@ -43,7 +43,7 @@ class AssertKoans extends TestCase
      */
     public function checkIfTwoVariablesAreEqualUsingAssertTrue()
     {
-        $expectedValue = __;
+        $expectedValue = 2;
         $actualValue = 1 + 1;
 
         $this->assertTrue($expectedValue == $actualValue);
@@ -55,7 +55,7 @@ class AssertKoans extends TestCase
      */
     public function checkIfTwoVariablesAreEqualUsingAssertEquals()
     {
-        $expectedValue = __;
+        $expectedValue = 2;
         $actualValue = 1 + 1;
 
         $this->assertEquals($expectedValue, $actualValue);
@@ -67,7 +67,7 @@ class AssertKoans extends TestCase
      */
     public function checkTheTypeOfAString()
     {
-        $this->assertEquals(__, gettype("What am I"));
+        $this->assertEquals(gettype('You are a string'), gettype("What am I"));
     }
 
     /**
@@ -79,6 +79,6 @@ class AssertKoans extends TestCase
         // See bottom of this file for class definition
         $object = new Enlightenment();
 
-        $this->assertEquals(__, get_class($object));
+        $this->assertEquals(Enlightenment::class, get_class($object));
     }
 }

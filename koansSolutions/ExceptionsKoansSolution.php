@@ -10,7 +10,7 @@ use RuntimeException;
 
 defined('__') or define('__', null);
 
-class ExceptionsKoans extends TestCase
+class ExceptionsKoansSolution extends TestCase
 {
     // Resources for learning about Exceptions => https://www.w3schools.com/php/php_exceptions.asp
 
@@ -21,7 +21,7 @@ class ExceptionsKoans extends TestCase
     public function useExpectExceptionMessage()
     {
         $this->expectException(Exception::class);
-        $this->expectExceptionMessage(__);
+        $this->expectExceptionMessage('Something went wrong');
 
         throw new Exception('Something went wrong');
     }
@@ -35,7 +35,7 @@ class ExceptionsKoans extends TestCase
         try {
             throw new Exception('Something went wrong');
         } catch (Exception $exception) {
-            $this->assertEquals(__, $exception->getMessage());
+            $this->assertEquals('Something went wrong', $exception->getMessage());
         }
     }
 
@@ -48,7 +48,7 @@ class ExceptionsKoans extends TestCase
         try {
             throw new RuntimeException('Runtime exception occurred');
         } catch (RuntimeException $exception) {
-            $this->assertEquals(__, $exception->getMessage());
+            $this->assertEquals('Runtime exception occurred', $exception->getMessage());
         } catch (Exception $exception) {
             $this->fail('Should not catch this exception');
         }
@@ -63,7 +63,7 @@ class ExceptionsKoans extends TestCase
         try {
             throw new RuntimeException('Runtime exception occurred');
         } catch (RuntimeException|LogicException $exception) {
-            $this->assertEquals(__, $exception->getMessage());
+            $this->assertEquals('Runtime exception occurred', $exception->getMessage());
         } catch (Exception $exception) {
             $this->fail('Should not catch this exception');
         }
@@ -78,9 +78,9 @@ class ExceptionsKoans extends TestCase
         try {
             throw new Exception('Something went wrong');
         } catch (Exception $exception) {
-            $this->assertEquals(__, $exception->getMessage());
+            $this->assertEquals('Something went wrong', $exception->getMessage());
         } finally {
-            $this->assertTrue(__);
+            $this->assertTrue(true);
         }
     }
 
@@ -91,7 +91,7 @@ class ExceptionsKoans extends TestCase
     public function createCustomExceptionsByExtendingTheExceptionClass()
     {
         $this->expectException(CustomGenericException::class);
-        $this->expectExceptionMessage(__);
+        $this->expectExceptionMessage("Some kind of madness");
 
         throw new CustomGenericException();
     }
