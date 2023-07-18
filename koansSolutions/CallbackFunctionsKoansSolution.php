@@ -8,6 +8,7 @@ use PHPUnit\Framework\TestCase;
 defined('__') or define('__', null);
 
 // Resources for learning about callbacks => https://www.php.net/manual/en/language.types.callable.php
+
 class CallbackFunctionsKoansSolution extends TestCase
 {
     /**
@@ -74,7 +75,7 @@ class CallbackFunctionsKoansSolution extends TestCase
 
     /**
      * @test
-     * @testdox The `array_map()` function applies a callback function to each element of an array => https://www.w3schools.com/php/func_array_map.asp
+     * @testdox array_map resources => https://www.w3schools.com/php/func_array_map.asp
      */
     public function usesArrayMapToChangeAnArrayUsingAFunction()
     {
@@ -105,7 +106,7 @@ class CallbackFunctionsKoansSolution extends TestCase
 
     /**
      * @test
-     * @testdox The `array_filter()` function filters elements of an array using a callback function => https://www.w3schools.com/php/func_array_filter.asp
+     * @testdox array_filter() resources => https://www.w3schools.com/php/func_array_filter.asp
      */
     public function usesArrayFilterToFilterAnArrayUsingAFunction()
     {
