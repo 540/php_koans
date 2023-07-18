@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 defined('__') or define('__', null);
 
 // Resources for learning about callbacks => https://www.php.net/manual/en/language.types.callable.php
-class CallbackFunctionsKoans extends TestCase
+class CallbackFunctionsKoansSolution extends TestCase
 {
     /**
      * @test
@@ -23,8 +23,8 @@ class CallbackFunctionsKoans extends TestCase
         $invokesWithFunction = call_user_func($callback, 'John');
         $invokesWithParentheses = $callback('John');
 
-        $this->assertEquals(__, $invokesWithFunction);
-        $this->assertEquals(__, $invokesWithParentheses);
+        $this->assertEquals('Hello, John!', $invokesWithFunction);
+        $this->assertEquals('Hello, John!', $invokesWithParentheses);
     }
 
     /**
@@ -42,7 +42,7 @@ class CallbackFunctionsKoans extends TestCase
 
         $result = $callback('John', $greeting);
 
-        $this->assertEquals(__, $result);
+        $this->assertEquals('Hello, John!', $result);
     }
 
     /**
@@ -55,7 +55,7 @@ class CallbackFunctionsKoans extends TestCase
 
         $result = call_user_func($callback, 'John');
 
-        $this->assertEquals(__, $result);
+        $this->assertEquals('Hello, John!', $result);
     }
 
     /**
@@ -69,7 +69,7 @@ class CallbackFunctionsKoans extends TestCase
 
         $result = $callback('John');
 
-        $this->assertEquals(__, $result);
+        $this->assertEquals('Hello, John!', $result);
     }
 
     /**
@@ -85,7 +85,7 @@ class CallbackFunctionsKoans extends TestCase
         
         $result = array_map($callback, $numbers);
 
-        $this->assertEquals(__, $result);
+        $this->assertEquals([1, 4, 9, 16, 25], $result);
     }
 
     /**
@@ -100,7 +100,7 @@ class CallbackFunctionsKoans extends TestCase
             return $number * 2;
         }, $numbers);
 
-        $this->assertEquals(__, $result);
+        $this->assertEquals([2, 4, 6, 8, 10], $result);
     }
 
     /**
@@ -115,6 +115,6 @@ class CallbackFunctionsKoans extends TestCase
             return $number % 2 === 0;
         });
 
-        $this->assertEquals(__, $result);
+        $this->assertEquals([1 => 2, 3 => 4], $result);
     }
 }
