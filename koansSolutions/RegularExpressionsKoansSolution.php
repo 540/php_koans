@@ -6,9 +6,9 @@ use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
 
+// Resources for learning about Regular Expressions => https://www.w3schools.com/php/php_regex.asp
 class RegularExpressionsKoansSolution extends TestCase
 {
-    // Resources for learning about Regular Expressions => https://www.w3schools.com/php/php_regex.asp
 
     /**
      * @test

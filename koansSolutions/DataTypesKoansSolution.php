@@ -7,9 +7,9 @@ use stdClass;
 
 defined('__') or define('__', null);
 
+// Resources for learning about Data Types => https://www.w3schools.com/php/php_datatypes.asp
 class DataTypesKoansSolution extends TestCase
 {
-    // Resources for learning about Data Types => https://www.w3schools.com/php/php_datatypes.asp
 
     /**
      * @test

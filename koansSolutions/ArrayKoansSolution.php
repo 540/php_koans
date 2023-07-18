@@ -6,9 +6,9 @@ use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
 
+// Resources for learning about arrays => https://www.w3schools.com/php/php_arrays.asp
 class ArrayKoansSolution extends TestCase
 {
-    // Resources for learning about arrays => https://www.w3schools.com/php/php_arrays.asp
 
     /**
      * @test

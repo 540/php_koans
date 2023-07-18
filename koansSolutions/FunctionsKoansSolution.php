@@ -6,9 +6,9 @@ use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
 
+// Resources for learning about Functions => https://www.w3schools.com/php/php_functions.asp
 class FunctionsKoansSolution extends TestCase
 {
-    // Resources for learning about Functions => https://www.w3schools.com/php/php_functions.asp
 
     /**
      * @test

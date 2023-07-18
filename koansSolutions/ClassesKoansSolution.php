@@ -10,9 +10,9 @@ use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
 
+// Resources for learning about Classes and Objects => https://www.w3schools.com/php/php_oop_classes_objects.asp
 class ClassesKoansSolution extends TestCase
 {
-    // Resources for learning about Classes and Objects => https://www.w3schools.com/php/php_oop_classes_objects.asp
 
     /**
      * @test

@@ -10,9 +10,9 @@ use RuntimeException;
 
 defined('__') or define('__', null);
 
+// Resources for learning about Exceptions => https://www.w3schools.com/php/php_exceptions.asp
 class ExceptionsKoans extends TestCase
 {
-    // Resources for learning about Exceptions => https://www.w3schools.com/php/php_exceptions.asp
 
     /**
      * @test
