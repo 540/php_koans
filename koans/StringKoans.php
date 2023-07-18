@@ -7,9 +7,9 @@ use PHPUnit\Framework\TestCase;
 defined('__') or define('__', null);
 
 // Resources for learning about Strings => https://www.w3schools.com/php/php_string.asp
+
 class StringKoans extends TestCase
 {
-
     /**
      * @test
      * @testdox You can create strings using double quotes

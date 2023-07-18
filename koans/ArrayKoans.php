@@ -7,9 +7,9 @@ use PHPUnit\Framework\TestCase;
 defined('__') or define('__', null);
 
 // Resources for learning about arrays => https://www.w3schools.com/php/php_arrays.asp
+
 class ArrayKoans extends TestCase
 {
-
     /**
      * @test
      * @testdox Index 0 is the first element of an array

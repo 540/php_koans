@@ -7,9 +7,9 @@ use PHPUnit\Framework\TestCase;
 defined('__') or define('__', null);
 
 // Resources for learning about Functions => https://www.w3schools.com/php/php_functions.asp
+
 class FunctionsKoans extends TestCase
 {
-
     /**
      * @test
      * @testdox Functions can be defined using the 'function' keyword

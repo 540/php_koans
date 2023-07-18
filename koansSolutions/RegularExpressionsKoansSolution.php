@@ -7,9 +7,9 @@ use PHPUnit\Framework\TestCase;
 defined('__') or define('__', null);
 
 // Resources for learning about Regular Expressions => https://www.w3schools.com/php/php_regex.asp
+
 class RegularExpressionsKoansSolution extends TestCase
 {
-
     /**
      * @test
      * @testdox preg_match tells you if a string contains matches of a pattern.

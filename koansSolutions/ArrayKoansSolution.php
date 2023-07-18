@@ -7,9 +7,9 @@ use PHPUnit\Framework\TestCase;
 defined('__') or define('__', null);
 
 // Resources for learning about arrays => https://www.w3schools.com/php/php_arrays.asp
+
 class ArrayKoansSolution extends TestCase
 {
-
     /**
      * @test
      * @testdox Index 0 is the first element of an array
@@ -38,7 +38,7 @@ class ArrayKoansSolution extends TestCase
      */
     public function getsTheAgeOnAssociativeArrays()
     {
-        $age = array("Joe"=>"49", "Mike"=>"27", "Charles"=>"32");
+        $age = array("Joe" => "49", "Mike" => "27", "Charles" => "32");
 
         // Extract Joe´s Age
         $this->assertEquals($age['Joe'], "49");
@@ -50,11 +50,11 @@ class ArrayKoansSolution extends TestCase
      */
     public function getsAllTheValuesOfAnArrayUsingLoops()
     {
-        $age = array("Joe"=>"49", "Mike"=>"27", "Charles"=>"32");
+        $age = array("Joe" => "49", "Mike" => "27", "Charles" => "32");
 
         // Create a ForEach Loop to pass the test
         $result = '';
-        foreach ($age as $key => $value){
+        foreach ($age as $key => $value) {
             $result .= "Key = $key, Value = $value ; ";
         }
 
@@ -75,9 +75,9 @@ class ArrayKoansSolution extends TestCase
         );
 
         // Extract the data to pass the test
-        $this->assertEquals("Model Car: {$cars[0][0]}, Car Color: {$cars[1][1]}, Car Id: {$cars[2][2]}", "Model Car: BMW, Car Color: White, Car Id: 3878 PXI");
-        $this->assertEquals("Model Car: {$cars[1][0]} , Car Color: {$cars[0][1]}, Car Id: {$cars[0][2]}", "Model Car: Mercedes , Car Color: Blue, Car Id: 6913 CMC");
-        $this->assertEquals("Model Car: {$cars[2][0]} , Car Color: {$cars[2][1]}, Car Id: {$cars[1][2]}", "Model Car: Aston Martin , Car Color: Black, Car Id: 5052 ZZA");
+        $this->assertEquals("Model Car: {$cars[0][0]}, Car Color: {$cars[1][1]}, Car Id: {$cars[2][2]}", "Model Car: BMW, Car Color: White, Car Id: 3878 PXI"); // phpcs:ignore
+        $this->assertEquals("Model Car: {$cars[1][0]} , Car Color: {$cars[0][1]}, Car Id: {$cars[0][2]}", "Model Car: Mercedes , Car Color: Blue, Car Id: 6913 CMC"); // phpcs:ignore
+        $this->assertEquals("Model Car: {$cars[2][0]} , Car Color: {$cars[2][1]}, Car Id: {$cars[1][2]}", "Model Car: Aston Martin , Car Color: Black, Car Id: 5052 ZZA"); // phpcs:ignore
     }
 
     /**
@@ -91,10 +91,10 @@ class ArrayKoansSolution extends TestCase
         // Sort the elements of the $numbers array in ascending order (Hint: There are functions to sort arrays)
         sort($numbers);
 
-        $this->assertEquals($numbers[0],1);
-        $this->assertEquals($numbers[1],2);
-        $this->assertEquals($numbers[2],2);
-        $this->assertEquals($numbers[3],3);
+        $this->assertEquals($numbers[0], 1);
+        $this->assertEquals($numbers[1], 2);
+        $this->assertEquals($numbers[2], 2);
+        $this->assertEquals($numbers[3], 3);
     }
 
     /**

@@ -7,9 +7,9 @@ use PHPUnit\Framework\TestCase;
 defined('__') or define('__', null);
 
 // Resources for learning about Strings => https://www.w3schools.com/php/php_string.asp
+
 class StringKoansSolution extends TestCase
 {
-
     /**
      * @test
      * @testdox You can create strings using double quotes
@@ -39,10 +39,10 @@ class StringKoansSolution extends TestCase
      */
     public function usesBackslashForEscapingQuotesInStrings()
     {
-        $a = "He said, \"Don't\"";
-        $b = 'He said, "Don\'t"';
+        $firstString = "He said, \"Don't\"";
+        $secondString = 'He said, "Don\'t"';
 
-        $this->assertEquals(true, ($a == $b));
+        $this->assertEquals(true, ($firstString == $secondString));
     }
 
     /**
@@ -53,7 +53,7 @@ class StringKoansSolution extends TestCase
     {
         $string = 'He said, "Go Away."';
 
-        $this->assertEquals("He said, \"Go Away.\"", $string); // Replace __ with a double quoted escaped version of the string
+        $this->assertEquals("He said, \"Go Away.\"", $string);
     }
 
     /**
@@ -97,9 +97,9 @@ class StringKoansSolution extends TestCase
      */
     public function usesDotToConcatenateStringsVariables()
     {
-        $hi = "Hello, ";
+        $hello = "Hello, ";
         $there = "World";
-        $string = $hi . $there;
+        $string = $hello . $there;
 
         $this->assertEquals('Hello, World', $string);
     }
@@ -110,11 +110,11 @@ class StringKoansSolution extends TestCase
      */
     public function usesDotToConcatenateStringsAndTheyWillNotBeModified()
     {
-        $hi = "Hello, ";
+        $hello = "Hello, ";
         $there = "World";
-        $string = $hi . $there;
+        $string = $hello . $there;
 
-        $this->assertEquals('Hello, ', $hi);
+        $this->assertEquals('Hello, ', $hello);
         $this->assertEquals('World', $there);
     }
 
@@ -124,10 +124,10 @@ class StringKoansSolution extends TestCase
      */
     public function usesDotEqualsToAppendTheVariableToTheEndOfAString()
     {
-        $hi = "Hello, ";
+        $hello = "Hello, ";
         $there = "World";
-        $hi .= $there;
+        $hello .= $there;
 
-        $this->assertEquals('Hello, World', $hi);
+        $this->assertEquals('Hello, World', $hello);
     }
 }

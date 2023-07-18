@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpKoans;
 
 use PhpKoans\koansResources\Classes\Enlightenment;
@@ -7,9 +8,9 @@ use PHPUnit\Framework\TestCase;
 defined('__') or define('__', null);
 
 // Resources for learning about assertions => https://phpunit.de/manual/6.5/en/appendixes.assertions.html
+
 class AssertKoansSolution extends TestCase
 {
-
     /**
      * @test
      * @testdox We shall contemplate truth by testing reality, via asserts

@@ -1,9 +1,14 @@
 <?php
+
 namespace PhpKoans;
 
 use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
+
+/**
+ * @SuppressWarnings(PHPMD.TooManyPublicMethods)
+ */
 
 class StringManipulationKoansSolution extends TestCase
 {
@@ -100,7 +105,7 @@ class StringManipulationKoansSolution extends TestCase
 
     /**
      * @test
-     * @testdox When formatting a string with sprintf, use different type specifiers for the different types of variables
+     * @testdox Use different type specifiers for the different types of variables
      */
     public function stringFormattingWithSprintfWithTypeSpecifiers()
     {
@@ -132,7 +137,7 @@ class StringManipulationKoansSolution extends TestCase
             $pricePer
         );
 
-        $this->assertEquals('He bought 3 bananas for $2.50 each, but those 3 bananas were not worth the price.', $string);
+        $this->assertEquals('He bought 3 bananas for $2.50 each, but those 3 bananas were not worth the price.', $string); // phpcs:disable
     }
 
     /**

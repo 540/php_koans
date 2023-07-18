@@ -9,6 +9,7 @@ defined('__') or define('__', null);
 /**
  * @SuppressWarnings(PHPMD.UndefinedVariable)
  */
+
 class EmptyIsNullOrIssetKoans extends TestCase
 {
     /**
@@ -23,7 +24,7 @@ class EmptyIsNullOrIssetKoans extends TestCase
 
     /**
      * @test
-     * @testdox isset returns true if variable exists and it is not null => https://www.w3schools.com/php/func_var_isset.asp
+     * @testdox isset returns true if variable exists and is not null
      */
     public function usesIssetMethodsToCheckIfTheVariableExistsAndItIsNotNull()
     {

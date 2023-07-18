@@ -6,6 +6,10 @@ use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
 
+/**
+ * @SuppressWarnings(PHPMD.UndefinedVariable)
+ */
+
 class EmptyIsNullOrIssetKoansSolution extends TestCase
 {
     /**
@@ -20,7 +24,7 @@ class EmptyIsNullOrIssetKoansSolution extends TestCase
 
     /**
      * @test
-     * @testdox isset returns true if variable exists and it is not null => https://www.w3schools.com/php/func_var_isset.asp
+     * @testdox isset returns true if variable exists and it is not null
      */
     public function usesIssetMethodsToCheckIfTheVariableExistsAndItIsNotNull()
     {
@@ -65,4 +69,3 @@ class EmptyIsNullOrIssetKoansSolution extends TestCase
         $this->assertEquals(true, empty($something));
     }
 }
-
