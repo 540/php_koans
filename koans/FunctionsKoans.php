@@ -26,9 +26,9 @@ class FunctionsKoans extends TestCase
      */
     public function testMethodParameters()
     {
-        function add($a, $b): int
+        function add($variableOne, $variableTwo): int
         {
-            return $a + $b;
+            return $variableOne + $variableTwo;
         }
 
         $this->assertEquals(__, add(2, 3));
@@ -75,13 +75,12 @@ class FunctionsKoans extends TestCase
      */
     public function testRecursiveFunction()
     {
-        function factorial($n): int
+        function factorial($number): int
         {
-            if ($n === 0) {
+            if ($number === 0) {
                 return 1;
-            } else {
-                return $n * factorial($n - 1);
             }
+            return $number * factorial($number - 1);
         }
 
         $result = factorial(5);

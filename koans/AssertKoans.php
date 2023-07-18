@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpKoans;
 
 use PHPUnit\Framework\TestCase;
@@ -31,7 +32,7 @@ class AssertKoans extends TestCase
     public function testFillInValues()
     {
         // Replace __ with your answer
-        $this->assertEquals(__, 1+1);
+        $this->assertEquals(__, 1 + 1);
     }
 
     /**

@@ -34,10 +34,10 @@ class StringKoans extends TestCase
      */
     public function testUseBackslashForEscapingQuotesInStrings()
     {
-        $a = "He said, \"Don't\"";
-        $b = 'He said, "Don\'t"';
+        $firstString = "He said, \"Don't\"";
+        $secondString = 'He said, "Don\'t"';
 
-        $this->assertEquals(__, ($a == $b));
+        $this->assertEquals(__, ($firstString == $secondString));
     }
 
     /**
@@ -87,9 +87,9 @@ class StringKoans extends TestCase
      */
     public function testDotWorksWithVariables()
     {
-        $hi = "Hello, ";
+        $hello = "Hello, ";
         $there = "World";
-        $string = $hi . $there;
+        $string = $hello . $there;
 
         $this->assertEquals(__, $string);
     }
@@ -99,11 +99,11 @@ class StringKoans extends TestCase
      */
     public function testDotWillNotModifyOriginalStrings()
     {
-        $hi = "Hello, ";
+        $hello = "Hello, ";
         $there = "World";
-        $string = $hi . $there;
+        $string = $hello . $there;
 
-        $this->assertEquals(__, $hi);
+        $this->assertEquals(__, $hello);
         $this->assertEquals(__, $there);
     }
 
@@ -112,10 +112,10 @@ class StringKoans extends TestCase
      */
     public function testDotEqualsAppendsToEndOfString()
     {
-        $hi = "Hello, ";
+        $hello = "Hello, ";
         $there = "World";
-        $hi .= $there;
+        $hello .= $there;
 
-        $this->assertEquals(__, $hi);
+        $this->assertEquals(__, $hello);
     }
 }

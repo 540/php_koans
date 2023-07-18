@@ -6,12 +6,15 @@ use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
 
+/**
+ * @SuppressWarnings(PHPMD.UndefinedVariable)
+ */
 class EmptyIsNullOrIssetKoans extends TestCase
 {
     /**
      * @testdox is_null return true if variable is null
      */
-    function testMethodIsNull()
+    public function testMethodIsNull()
     {
         $this->assertEquals(__, is_null(null));
         $this->assertEquals(__, is_null(""));
@@ -20,7 +23,7 @@ class EmptyIsNullOrIssetKoans extends TestCase
     /**
      * @testdox isset returns true if variable exists and it is not null
      */
-    function testMethodIsset()
+    public function testMethodIsset()
     {
         $this->assertEquals(__, isset($something));
 
@@ -34,7 +37,7 @@ class EmptyIsNullOrIssetKoans extends TestCase
     /**
      * @testdox empty returns true if the variable is empty
      */
-    function testMethodEmpty()
+    public function testMethodEmpty()
     {
         //Working with integers.
         $this->assertEquals(__, empty(0));
@@ -62,4 +65,3 @@ class EmptyIsNullOrIssetKoans extends TestCase
         $this->assertEquals(__, empty($something));
     }
 }
-

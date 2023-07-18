@@ -1,10 +1,14 @@
 <?php
+
 namespace PhpKoans;
 
 use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
 
+/**
+ * @SuppressWarnings(PHPMD.TooManyPublicMethods)
+ */
 class StringManipulationKoans extends TestCase
 {
     /**
@@ -90,7 +94,8 @@ EOT;
     }
 
     /**
-     * @testdox When formatting a string with sprintf, use different type specifiers for the different types of variables.
+     * @testdox When formatting a string with sprintf, use different type
+     * specifiers for the different types of variables.
      */
     public function testStringFormattingWithSprintfTypeSpecifiers()
     {

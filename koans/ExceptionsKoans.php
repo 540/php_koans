@@ -56,7 +56,7 @@ class ExceptionsKoans extends TestCase
     {
         try {
             throw new RuntimeException('Runtime exception occurred');
-        } catch (RuntimeException|LogicException $exception) {
+        } catch (RuntimeException | LogicException $exception) {
             $this->assertEquals(__, $exception->getMessage());
         } catch (Exception $exception) {
             $this->fail('Should not catch this exception');

@@ -10,10 +10,15 @@ use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
 
+/**
+ * @SuppressWarnings(PHPMD.TooManyPublicMethods)
+ * @SuppressWarnings(PHPMD.StaticAccess)
+ */
 class ClassesKoans extends TestCase
 {
     /**
-     * @testdox Classes can be defined using the `class` keyword and you can create multiple instances of a class (objects)
+     * @testdox Classes can be defined using the `class` keyword and you can
+     * create multiple instances of a class (objects)
      */
     public function testInstanceOfAClass()
     {
@@ -109,7 +114,7 @@ class ClassesKoans extends TestCase
         SportCar::$counter++;
         $sportsCar->setColor('red');
 
-        $this->assertEquals(__,$sportsCar::getCount());
+        $this->assertEquals(__, $sportsCar::getCount());
         $this->assertEquals(__, $sportsCar->color);
         $this->assertEquals(__, $sportsCar->getBrand());
     }

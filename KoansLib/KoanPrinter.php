@@ -1,4 +1,5 @@
 <?php
+
 namespace KoansLib;
 
 use PHPUnit\Framework\TestResult;
@@ -10,6 +11,12 @@ use PHPUnit\Util\TestDox\CliTestDoxPrinter;
  * Override the basic PHPUnit ResultPrinter to produce a more mindful output
  *
  * @package KoansLib
+ */
+
+/**
+ * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+ * @SuppressWarnings(PHPMD.ElseExpression)
+ * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
  */
 class KoanPrinter extends CliTestDoxPrinter
 {
@@ -36,10 +43,12 @@ class KoanPrinter extends CliTestDoxPrinter
             return;
         }
 
-        if ($result->wasSuccessful() &&
+        if (
+            $result->wasSuccessful() &&
             $result->allHarmless() &&
             $result->allCompletelyImplemented() &&
-            $result->noneSkipped()) {
+            $result->noneSkipped()
+        ) {
             $this->writeWithColor(
                 'fg-black, bg-green',
                 \sprintf(
@@ -123,5 +132,4 @@ class KoanPrinter extends CliTestDoxPrinter
             $first = false;
         }
     }
-
 }
