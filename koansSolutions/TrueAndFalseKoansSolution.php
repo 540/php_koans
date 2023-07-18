@@ -7,54 +7,55 @@ use PHPUnit\Framework\TestCase;
 defined('__') or define('__', null);
 
 // Resources for learning about Booleans => https://www.php.net/manual/es/language.types.boolean.php
-class TrueAndFalseKoans extends TestCase
+class TrueAndFalseKoansSolution extends TestCase
 {
+
     /**
      * @test
      * @testdox 3 and '3' are the same thing, but, the type? (Equal operator)
      */
-    public function usesTheEqualOperatorToCheckIfStringAndIntAreEqual()
+    public function usesEqualOperatorToCheckIfStringAndIntAreEqual()
     {
         $integer = 3;
         $string = '3';
 
-        $this->assertEquals(__, $integer == $string);
+        $this->assertEquals(true, $integer == $string);
     }
 
     /**
      * @test
      * @testdox 3 and '3' are identical, or not? (Identical operator)
      */
-    public function usesTheIdenticalOperatorToCheckIfStringAndIntAreIdentical()
+    public function usesIdenticalOperatorToCheckIfStringAndIntAreIdentical()
     {
         $integer = 3;
         $string = '3';
 
-        $this->assertEquals(true, $integer === $string);
+        $this->assertEquals(false, $integer === $string);
     }
 
     /**
      * @test
      * @testdox It's the same with Not Equal Operator
      */
-    public function usesTheNotEqualOperatorToCheckIfStringAndIntAreEqual()
+    public function usesNotEqualOperatorToCheckIfStringAndIntAreEqual()
     {
         $integer = 3;
         $string = '3';
 
-        $this->assertEquals(true, $integer != $string);
+        $this->assertEquals(false, $integer != $string);
     }
 
     /**
      * @test
      * @testdox What happens if we use Not Identical Operator?
      */
-    public function usesTheNotIdenticalOperatorToCheckIfStringAndIntAreIdentical()
+    public function usesNotIdenticalOperatorToCheckIfStringAndIntAreIdentical()
     {
         $integer = 3;
         $string = '3';
 
-        $this->assertEquals(false, $integer !== $string);
+        $this->assertEquals(true, $integer !== $string);
     }
 
     /**
@@ -67,9 +68,9 @@ class TrueAndFalseKoans extends TestCase
         $weight = 70;
         $wingspan = 70;
 
-        $this->assertEquals(__, $age > $weight);
-        $this->assertEquals(__, $age <= $wingspan);
-        $this->assertEquals(__, $wingspan >= $weight);
+        $this->assertEquals(false, $age > $weight);
+        $this->assertEquals(true, $age <= $wingspan);
+        $this->assertEquals(true, $wingspan >= $weight);
     }
 
     /**
@@ -78,7 +79,7 @@ class TrueAndFalseKoans extends TestCase
      */
     public function checksIfAnEmptyStringIsTrue()
     {
-        $this->assertEquals(__, '');
+        $this->assertEquals(false, '');
     }
 
     /**
@@ -87,8 +88,8 @@ class TrueAndFalseKoans extends TestCase
      */
     public function checksIfZeroIsTrue()
     {
-        $this->assertEquals(__, 0);
-        $this->assertEquals(__, '0');
+        $this->assertEquals(false, 0);
+        $this->assertEquals(false, '0');
     }
 
     /**
@@ -97,7 +98,7 @@ class TrueAndFalseKoans extends TestCase
      */
     public function checksIfTheStringFalseIsReallyFalse()
     {
-        $this->assertEquals(__, 'false');
+        $this->assertEquals(true, 'false');
     }
 
     /**
@@ -106,7 +107,7 @@ class TrueAndFalseKoans extends TestCase
      */
     public function checksIfAnEmptyArrayIsTrue()
     {
-        $this->assertEquals(__, boolval(array()));
+        $this->assertEquals(false, boolval(array()));
     }
 
     /**
@@ -115,6 +116,6 @@ class TrueAndFalseKoans extends TestCase
      */
     public function checksIfNullIsTrue()
     {
-        $this->assertEquals(__, null);
+        $this->assertEquals(false, null);
     }
 }

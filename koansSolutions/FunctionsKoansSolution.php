@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 defined('__') or define('__', null);
 
 // Resources for learning about Functions => https://www.w3schools.com/php/php_functions.asp
-class FunctionsKoans extends TestCase
+class FunctionsKoansSolution extends TestCase
 {
 
     /**
@@ -21,7 +21,7 @@ class FunctionsKoans extends TestCase
             return 'Hello, world!';
         }
 
-        $this->assertEquals(__, sayHello());
+        $this->assertEquals('Hello, world!', sayHello());
     }
 
     /**
@@ -30,12 +30,12 @@ class FunctionsKoans extends TestCase
      */
     public function usesFunctionsArgumentsToPassInformationToFunctions()
     {
-        function add($variableOne, $variableTwo): int
+        function add($a, $b): int
         {
-            return $variableOne + $variableTwo;
+            return $a + $b;
         }
 
-        $this->assertEquals(__, add(2, 3));
+        $this->assertEquals(5, add(2, 3));
     }
 
     /**
@@ -52,8 +52,8 @@ class FunctionsKoans extends TestCase
         $result1 = greet();
         $result2 = greet('John');
 
-        $this->assertEquals(__, $result1);
-        $this->assertEquals(__, $result2);
+        $this->assertEquals('Hello, Guest!', $result1);
+        $this->assertEquals('Hello, John!', $result2);
     }
 
     /**
@@ -72,8 +72,8 @@ class FunctionsKoans extends TestCase
 
         list($firstName, $lastName) = getFullName();
 
-        $this->assertEquals(__, $firstName);
-        $this->assertEquals(__, $lastName);
+        $this->assertEquals('John', $firstName);
+        $this->assertEquals('Doe', $lastName);
     }
 
     /**
@@ -82,16 +82,17 @@ class FunctionsKoans extends TestCase
      */
     public function usesRecursionToCallTheFunctionInsideIt()
     {
-        function factorial($number): int
+        function factorial($n): int
         {
-            if ($number === 0) {
+            if ($n === 0) {
                 return 1;
+            } else {
+                return $n * factorial($n - 1);
             }
-            return $number * factorial($number - 1);
         }
 
         $result = factorial(5);
 
-        $this->assertEquals(__, $result);
+        $this->assertEquals(120, $result);
     }
 }

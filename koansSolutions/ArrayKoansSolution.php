@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 defined('__') or define('__', null);
 
 // Resources for learning about arrays => https://www.w3schools.com/php/php_arrays.asp
-class ArrayKoans extends TestCase
+class ArrayKoansSolution extends TestCase
 {
 
     /**
@@ -18,7 +18,7 @@ class ArrayKoans extends TestCase
     {
         $cars = array("BMW", "Mercedes", "Aston Martin");
 
-        $this->assertEquals(__, $cars[0]);
+        $this->assertEquals('BMW', $cars[0]);
     }
 
     /**
@@ -29,7 +29,7 @@ class ArrayKoans extends TestCase
     {
         $fruits = array("Apple", "Banana", "Pineaple", "Cherry");
 
-        $this->assertEquals(__, count($fruits));
+        $this->assertEquals(4, count($fruits));
     }
 
     /**
@@ -38,10 +38,10 @@ class ArrayKoans extends TestCase
      */
     public function getsTheAgeOnAssociativeArrays()
     {
-        $age = array("Joe" => "49", "Mike" => "27", "Charles" => "32");
+        $age = array("Joe"=>"49", "Mike"=>"27", "Charles"=>"32");
 
         // Extract Joe´s Age
-        $this->assertEquals(__, "49");
+        $this->assertEquals($age['Joe'], "49");
     }
 
     /**
@@ -50,12 +50,16 @@ class ArrayKoans extends TestCase
      */
     public function getsAllTheValuesOfAnArrayUsingLoops()
     {
-        $age = array("Joe" => "49", "Mike" => "27", "Charles" => "32");
+        $age = array("Joe"=>"49", "Mike"=>"27", "Charles"=>"32");
 
         // Create a ForEach Loop to pass the test
+        $result = '';
+        foreach ($age as $key => $value){
+            $result .= "Key = $key, Value = $value ; ";
+        }
 
         // Extract Joe´s Age
-        $this->assertEquals(__, "Key = Joe, Value = 49 ; Key = Mike, Value = 27 ; Key = Charles, Value = 32 ; ");
+        $this->assertEquals($result, "Key = Joe, Value = 49 ; Key = Mike, Value = 27 ; Key = Charles, Value = 32 ; ");
     }
 
     /**
@@ -71,9 +75,9 @@ class ArrayKoans extends TestCase
         );
 
         // Extract the data to pass the test
-        $this->assertEquals(__, "Model Car: BMW , Car Color: White, Car Id: 3878 PXI");
-        $this->assertEquals(__, "Model Car: Mercedes , Car Color: Blue, Car Id: 6913 CMC");
-        $this->assertEquals(__, "Model Car: Aston Martin , Car Color: Black, Car Id: 5052 ZZA");
+        $this->assertEquals("Model Car: {$cars[0][0]}, Car Color: {$cars[1][1]}, Car Id: {$cars[2][2]}", "Model Car: BMW, Car Color: White, Car Id: 3878 PXI");
+        $this->assertEquals("Model Car: {$cars[1][0]} , Car Color: {$cars[0][1]}, Car Id: {$cars[0][2]}", "Model Car: Mercedes , Car Color: Blue, Car Id: 6913 CMC");
+        $this->assertEquals("Model Car: {$cars[2][0]} , Car Color: {$cars[2][1]}, Car Id: {$cars[1][2]}", "Model Car: Aston Martin , Car Color: Black, Car Id: 5052 ZZA");
     }
 
     /**
@@ -85,11 +89,12 @@ class ArrayKoans extends TestCase
         $numbers = array(3,2,2,1);
 
         // Sort the elements of the $numbers array in ascending order (Hint: There are functions to sort arrays)
+        sort($numbers);
 
-        $this->assertEquals(__, 1);
-        $this->assertEquals(__, 2);
-        $this->assertEquals(__, 2);
-        $this->assertEquals(__, 3);
+        $this->assertEquals($numbers[0],1);
+        $this->assertEquals($numbers[1],2);
+        $this->assertEquals($numbers[2],2);
+        $this->assertEquals($numbers[3],3);
     }
 
     /**
@@ -101,9 +106,10 @@ class ArrayKoans extends TestCase
         $cars = array("BMW", "Mercedes", "Aston Martin");
 
         //Sort the elements of the $cars array in descending alphabetical order
+        rsort($cars);
 
-        $this->assertEquals(__, 'Mercedes');
-        $this->assertEquals(__, 'BMW');
-        $this->assertEquals(__, 'Aston Martin');
+        $this->assertEquals($cars[0], 'Mercedes');
+        $this->assertEquals($cars[1], 'BMW');
+        $this->assertEquals($cars[2], 'Aston Martin');
     }
 }

@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 defined('__') or define('__', null);
 
 // Resources for learning about Strings => https://www.w3schools.com/php/php_string.asp
-class StringKoans extends TestCase
+class StringKoansSolution extends TestCase
 {
 
     /**
@@ -19,7 +19,7 @@ class StringKoans extends TestCase
         $string = "Hello, world.";
 
         // is_string() returns a true or false
-        $this->assertEquals(__, is_string($string));
+        $this->assertEquals('Hello, world.', is_string($string));
     }
 
     /**
@@ -30,7 +30,7 @@ class StringKoans extends TestCase
     {
         $string = 'Goodbye, world.';
 
-        $this->assertEquals(__, is_string($string));
+        $this->assertEquals(true, is_string($string));
     }
 
     /**
@@ -39,10 +39,10 @@ class StringKoans extends TestCase
      */
     public function usesBackslashForEscapingQuotesInStrings()
     {
-        $firstString = "He said, \"Don't\"";
-        $secondString = 'He said, "Don\'t"';
+        $a = "He said, \"Don't\"";
+        $b = 'He said, "Don\'t"';
 
-        $this->assertEquals(__, ($firstString == $secondString));
+        $this->assertEquals(true, ($a == $b));
     }
 
     /**
@@ -53,7 +53,7 @@ class StringKoans extends TestCase
     {
         $string = 'He said, "Go Away."';
 
-        $this->assertEquals(__, $string); // Replace __ with a double quoted escaped version of the string
+        $this->assertEquals("He said, \"Go Away.\"", $string); // Replace __ with a double quoted escaped version of the string
     }
 
     /**
@@ -64,7 +64,7 @@ class StringKoans extends TestCase
     {
         $string = "Don't";
 
-        $this->assertEquals(__, $string); // Replace __ with a single quoted escaped version of the string
+        $this->assertEquals('Don\'t', $string); // Replace __ with a single quoted escaped version of the string
     }
 
     /**
@@ -77,7 +77,7 @@ class StringKoans extends TestCase
         It was the worst of times.";
 
         // strlen() returns the length of a string as an integer (Hint: line breaks count as a character)
-        $this->assertEquals(__, strlen($string));
+        $this->assertEquals(60, strlen($string));
     }
 
     /**
@@ -88,7 +88,7 @@ class StringKoans extends TestCase
     {
         $string = "Hello, " . "World";
 
-        $this->assertEquals(__, $string);
+        $this->assertEquals('Hello, World', $string);
     }
 
     /**
@@ -97,11 +97,11 @@ class StringKoans extends TestCase
      */
     public function usesDotToConcatenateStringsVariables()
     {
-        $hello = "Hello, ";
+        $hi = "Hello, ";
         $there = "World";
-        $string = $hello . $there;
+        $string = $hi . $there;
 
-        $this->assertEquals(__, $string);
+        $this->assertEquals('Hello, World', $string);
     }
 
     /**
@@ -110,12 +110,12 @@ class StringKoans extends TestCase
      */
     public function usesDotToConcatenateStringsAndTheyWillNotBeModified()
     {
-        $hello = "Hello, ";
+        $hi = "Hello, ";
         $there = "World";
-        $string = $hello . $there;
+        $string = $hi . $there;
 
-        $this->assertEquals(__, $hello);
-        $this->assertEquals(__, $there);
+        $this->assertEquals('Hello, ', $hi);
+        $this->assertEquals('World', $there);
     }
 
     /**
@@ -124,10 +124,10 @@ class StringKoans extends TestCase
      */
     public function usesDotEqualsToAppendTheVariableToTheEndOfAString()
     {
-        $hello = "Hello, ";
+        $hi = "Hello, ";
         $there = "World";
-        $hello .= $there;
+        $hi .= $there;
 
-        $this->assertEquals(__, $hello);
+        $this->assertEquals('Hello, World', $hi);
     }
 }

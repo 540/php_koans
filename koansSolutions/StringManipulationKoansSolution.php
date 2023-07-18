@@ -1,15 +1,11 @@
 <?php
-
 namespace PhpKoans;
 
 use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
 
-/**
- * @SuppressWarnings(PHPMD.TooManyPublicMethods)
- */
-class StringManipulationKoans extends TestCase
+class StringManipulationKoansSolution extends TestCase
 {
     /**
      * @test
@@ -20,7 +16,7 @@ class StringManipulationKoans extends TestCase
         $value = "one";
         $string = "The value is $value";
 
-        $this->assertEquals(__, $string);
+        $this->assertEquals('The value is one', $string);
     }
 
     /**
@@ -32,7 +28,7 @@ class StringManipulationKoans extends TestCase
         $value = "one";
         $string = 'The value is $value';
 
-        $this->assertEquals(__, $string);
+        $this->assertEquals('The value is $value', $string);
     }
 
     /**
@@ -44,7 +40,7 @@ class StringManipulationKoans extends TestCase
         $value = "one";
         $string = "The value is {$value}";
 
-        $this->assertEquals(__, $string);
+        $this->assertEquals('The value is one', $string);
     }
 
     /**
@@ -56,7 +52,7 @@ class StringManipulationKoans extends TestCase
         $values = ["test" => "one", "foo" => "two"];
         $string = "The value is {$values["test"]}";
 
-        $this->assertEquals(__, $string);
+        $this->assertEquals('The value is one', $string);
     }
 
     /**
@@ -71,7 +67,7 @@ class StringManipulationKoans extends TestCase
         EOT;
 
         // Hint: First and last line breaks of a Heredoc don't count
-        $this->assertEquals(__, $string);
+        $this->assertEquals('The value is one', $string);
     }
 
     /**
@@ -86,7 +82,7 @@ class StringManipulationKoans extends TestCase
         EOT;
 
         // Hint: First and last line breaks of a Heredoc don't count
-        $this->assertEquals(__, $string);
+        $this->assertEquals('The value is $value', $string);
     }
 
     /**
@@ -99,12 +95,12 @@ class StringManipulationKoans extends TestCase
 
         $string = sprintf('He bought a %s.', $product);
 
-        $this->assertEquals(__, $string);
+        $this->assertEquals('He bought a banana.', $string);
     }
 
     /**
-     * @testdox When formatting a string with sprintf, use different type
-     * specifiers for the different types of variables.
+     * @test
+     * @testdox When formatting a string with sprintf, use different type specifiers for the different types of variables
      */
     public function stringFormattingWithSprintfWithTypeSpecifiers()
     {
@@ -115,7 +111,7 @@ class StringManipulationKoans extends TestCase
         // Be careful of the default floating point precision (6 decimal places)
         $string = sprintf('He bought %d %s for $%f.', $quantity, $product, $pricePer);
 
-        $this->assertEquals(__, $string);
+        $this->assertEquals('He bought 3 bananas for $2.500000.', $string);
     }
 
     /**
@@ -136,7 +132,7 @@ class StringManipulationKoans extends TestCase
             $pricePer
         );
 
-        $this->assertEquals(__, $string);
+        $this->assertEquals('He bought 3 bananas for $2.50 each, but those 3 bananas were not worth the price.', $string);
     }
 
     /**
@@ -147,7 +143,7 @@ class StringManipulationKoans extends TestCase
     {
         $string = "Bacon, lettuce and tomato";
 
-        $this->assertEquals(__, substr($string, 7, 10));
+        $this->assertEquals('lettuce an', substr($string, 7, 10));
     }
 
     /**
@@ -158,7 +154,7 @@ class StringManipulationKoans extends TestCase
     {
         $string = "Bacon, lettuce and tomato";
 
-        $this->assertEquals(__, $string[1]);
+        $this->assertEquals('a', $string[1]);
     }
 
     /**
@@ -170,7 +166,7 @@ class StringManipulationKoans extends TestCase
         $string = "Sausage Egg Cheese";
         $words = explode(" ", $string);
 
-        $this->assertEquals([__, __, __], $words);
+        $this->assertEquals(['Sausage', 'Egg', 'Cheese'], $words);
     }
 
     /**
@@ -182,7 +178,7 @@ class StringManipulationKoans extends TestCase
         $words = ["Now", "is", "the", "time"];
         $string = implode(" ", $words);
 
-        $this->assertEquals(__, $string);
+        $this->assertEquals('Now is the time', $string);
     }
 
     /**
@@ -191,8 +187,8 @@ class StringManipulationKoans extends TestCase
      */
     public function changesTheCaseOfTheStrings()
     {
-        $this->assertEquals(__, ucwords('one hand clap'));
-        $this->assertEquals(__, strtoupper('one hand clap'));
-        $this->assertEquals(__, strtolower('Sausage EGG Cheese'));
+        $this->assertEquals('One Hand Clap', ucwords('one hand clap'));
+        $this->assertEquals('ONE HAND CLAP', strtoupper('one hand clap'));
+        $this->assertEquals('sausage egg cheese', strtolower('Sausage EGG Cheese'));
     }
 }
