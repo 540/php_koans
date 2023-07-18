@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 defined('__') or define('__', null);
 
 // Resources for learning about Regular Expressions => https://www.w3schools.com/php/php_regex.asp
-class RegularExpressionsKoans extends TestCase
+class RegularExpressionsKoansSolution extends TestCase
 {
 
     /**
@@ -19,7 +19,7 @@ class RegularExpressionsKoans extends TestCase
         $str = "PHP Koans have more Koans";
         $pattern = "/Koans/i";
 
-        $this->assertEquals(__, preg_match($pattern, $str));
+        $this->assertEquals(1, preg_match($pattern, $str));
     }
 
     /**
@@ -31,7 +31,7 @@ class RegularExpressionsKoans extends TestCase
         $str = "Rain in SPAIN falls mainly on the plains.";
         $pattern = "/ain/i";
 
-        $this->assertEquals(__, preg_match_all($pattern, $str));
+        $this->assertEquals(4, preg_match_all($pattern, $str));
     }
 
     /**
@@ -44,7 +44,7 @@ class RegularExpressionsKoans extends TestCase
         $pattern = "";
 
         //Use preg_replace
-        $str_replaced = "";
+        $str_replaced = preg_replace('/python/i', 'PHP', $str);
         $this->assertEquals($str_replaced, "This is the PHP Koans, PHP Rules!.");
     }
 }

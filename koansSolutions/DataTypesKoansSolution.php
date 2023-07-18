@@ -8,7 +8,7 @@ use stdClass;
 defined('__') or define('__', null);
 
 // Resources for learning about Data Types => https://www.w3schools.com/php/php_datatypes.asp
-class DataTypesKoans extends TestCase
+class DataTypesKoansSolution extends TestCase
 {
 
     /**
@@ -17,7 +17,7 @@ class DataTypesKoans extends TestCase
      */
     public function createsStringUsingSingleOrDoubleQuotes()
     {
-        $string = 3;
+        $string = '3';
 
         $this->assertTrue(is_string($string));
     }
@@ -28,7 +28,7 @@ class DataTypesKoans extends TestCase
      */
     public function createsIntUsingNumbersWithoutDecimals()
     {
-        $integer = 'I want to be an int';
+        $integer = 3;
 
         $this->assertTrue(is_int($integer));
     }
@@ -39,7 +39,7 @@ class DataTypesKoans extends TestCase
      */
     public function createsFloatUsingNumbersWithDecimalPoints()
     {
-        $float = 1;
+        $float = 1.1;
 
         $this->assertTrue(is_float($float));
     }
@@ -53,10 +53,10 @@ class DataTypesKoans extends TestCase
         $booleanTrue = true;
         $booleanFalse = false;
 
-        $this->assertEquals(__, $booleanTrue);
-        $this->assertEquals(__, $booleanFalse);
-        $this->assertEquals(__, is_bool($booleanTrue));
-        $this->assertEquals(__, is_bool($booleanFalse));
+        $this->assertEquals(true, $booleanTrue);
+        $this->assertEquals(false, $booleanFalse);
+        $this->assertEquals(true, is_bool($booleanTrue));
+        $this->assertEquals(true, is_bool($booleanFalse));
     }
 
     /**
@@ -67,8 +67,8 @@ class DataTypesKoans extends TestCase
     {
         $array = [1, 2, 3];
 
-        $this->assertEquals(__, $array);
-        $this->assertEquals(__, is_array($array));
+        $this->assertEquals([1,2,3], $array);
+        $this->assertEquals(true, is_array($array));
     }
 
     /**
@@ -79,18 +79,18 @@ class DataTypesKoans extends TestCase
     {
         $object = new stdClass();
 
-        $this->assertEquals(__, is_object($object));
+        $this->assertEquals(true, is_object($object));
     }
 
     /**
      * @test
      * @testdox Null represents the absence of a value
      */
-    public function createsNullUsingNullKeyword()
+    public function createNullUsingNullKeyword()
     {
         $null = null;
 
-        $this->assertEquals(__, is_null($null));
+        $this->assertEquals(true, is_null($null));
     }
 
     /**
@@ -101,7 +101,7 @@ class DataTypesKoans extends TestCase
     {
         $resource = fopen('composer.json', 'r');
 
-        $this->assertEquals(__, is_resource($resource));
+        $this->assertEquals(true, is_resource($resource));
 
         fclose($resource);
     }

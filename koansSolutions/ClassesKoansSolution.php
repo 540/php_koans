@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 defined('__') or define('__', null);
 
 // Resources for learning about Classes and Objects => https://www.w3schools.com/php/php_oop_classes_objects.asp
-class ClassesKoans extends TestCase
+class ClassesKoansSolution extends TestCase
 {
 
     /**
@@ -20,7 +20,7 @@ class ClassesKoans extends TestCase
      */
     public function definesAClassUsingClassKeyword()
     {
-        $exampleClass = 'I want to be an object of class ExampleClass';
+        $exampleClass = new ExampleClass();
 
         $this->assertTrue(is_object($exampleClass));
     }
@@ -33,7 +33,7 @@ class ClassesKoans extends TestCase
     {
         $exampleClass = new ExampleClass();
 
-        $this->assertEquals(__, $exampleClass->exampleProperty);
+        $this->assertEquals("Hi, I'm a property", $exampleClass->exampleProperty);
     }
 
     /**
@@ -44,7 +44,7 @@ class ClassesKoans extends TestCase
     {
         $exampleClass = new ExampleClass();
 
-        $this->assertEquals(__, $exampleClass->exampleMethod());
+        $this->assertEquals("Hi, I'm a method", $exampleClass->exampleMethod());
     }
 
     /**
@@ -53,7 +53,7 @@ class ClassesKoans extends TestCase
      */
     public function initializesPropertiesWithConstructor()
     {
-        $car = new Car(__, __);
+        $car = new Car('blue', 'Ferrari');
 
         $this->assertEquals('blue', $car->color);
         $this->assertEquals('Ferrari', $car->getBrand());
@@ -69,8 +69,8 @@ class ClassesKoans extends TestCase
 
         $car->setColor('red');
 
-        $this->assertEquals(__, $car->color);
-        $this->assertEquals(__, $car->getBrand());
+        $this->assertEquals('red', $car->color);
+        $this->assertEquals('Aston Martin', $car->getBrand());
     }
 
     /**
@@ -81,8 +81,8 @@ class ClassesKoans extends TestCase
     {
         Car::$counter++;
 
-        $this->assertEquals(__, Car::$counter);
-        $this->assertEquals(__, Car::getCount());
+        $this->assertEquals(1, Car::$counter);
+        $this->assertEquals(1, Car::getCount());
     }
 
     /**
@@ -94,7 +94,7 @@ class ClassesKoans extends TestCase
         $car = new Car('yellow', 'Mercedes');
 
         $this->expectException(Error::class);
-        $this->expectExceptionMessage('Fix me');
+        $this->expectExceptionMessage('Cannot access private property');
         $car->privateProperty;
     }
 
@@ -106,7 +106,7 @@ class ClassesKoans extends TestCase
     {
         $car = new Car('yellow', 'Mercedes');
 
-        $this->assertEquals('This is protected', $car->protectedProperty);
+        $this->assertEquals('This is protected', $car->getProtectedProperty());
     }
 
     /**
@@ -120,9 +120,9 @@ class ClassesKoans extends TestCase
         SportCar::$counter++;
         $sportCar->setColor('red');
 
-        $this->assertEquals(__, $sportCar::getCount());
-        $this->assertEquals(__, $sportCar->color);
-        $this->assertEquals(__, $sportCar->getBrand());
+        $this->assertEquals(2, $sportCar::getCount());
+        $this->assertEquals('red', $sportCar->color);
+        $this->assertEquals('Toyota', $sportCar->getBrand());
     }
 
     /**
@@ -133,8 +133,8 @@ class ClassesKoans extends TestCase
     {
         $sportCar = new SportCar('yellow', 'Ferrari');
 
-        $this->assertEquals('Engine started', $sportCar->startEngine());
-        $this->assertEquals('Driving at 200 km/h', $sportCar->drive(200));
+        $this->assertEquals('Engine started with turbo!', $sportCar->startEngine());
+        $this->assertEquals('Driving at 200 m/h', $sportCar->drive(200));
     }
 
     /**
@@ -145,7 +145,7 @@ class ClassesKoans extends TestCase
     {
         $sportCar = new SportCar('yellow', 'Ferrari');
 
-        $this->assertEquals('This is protected', $sportCar->getProtectedProperty());
-        $this->assertEquals('Can I change?', $sportCar->getSecret());
+        $this->assertEquals('The protected properties are visible in the subclass', $sportCar->getProtectedProperty());
+        $this->assertEquals('This is hidden out of the class', $sportCar->getSecret());
     }
 }

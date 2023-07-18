@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpKoans\Classes;
+namespace PhpKoans\koansResources\Classes;
 
 class SportCar extends Car
 {
     protected string $protectedProperty = 'The protected properties are visible in the subclass';
-    private string $secretProperty = 'Can I change?';
+    private string $privateProperty = 'Can I change?';
 
     public function startEngine(): string
     {
