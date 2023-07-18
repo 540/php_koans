@@ -18,7 +18,7 @@ class ExceptionsKoansSolution extends TestCase
      * @test
      * @testdox Exceptions can be thrown using the `throw` keyword
      */
-    public function useExpectExceptionMessage()
+    public function usesExpectExceptionMessage()
     {
         $this->expectException(Exception::class);
         $this->expectExceptionMessage('Something went wrong');
@@ -30,7 +30,7 @@ class ExceptionsKoansSolution extends TestCase
      * @test
      * @testdox Catching exceptions using try-catch blocks
      */
-    public function useTryCatchStatementToCatchExceptionsAndContinueTheProcess()
+    public function usesTryCatchStatementToCatchExceptionsAndContinueTheProcess()
     {
         try {
             throw new Exception('Something went wrong');
@@ -43,7 +43,7 @@ class ExceptionsKoansSolution extends TestCase
      * @test
      * @testdox Catching multiple exceptions using separate catch blocks
      */
-    public function useTwoCatchBlocksToCatchMultipleExceptions()
+    public function usesTwoCatchBlocksToCatchMultipleExceptions()
     {
         try {
             throw new RuntimeException('Runtime exception occurred');
@@ -58,7 +58,7 @@ class ExceptionsKoansSolution extends TestCase
      * @test
      * @testdox Catching multiple exceptions using a single catch block
      */
-    public function catchMultipleExceptionsSingleBlockUsingPipes()
+    public function catchesMultipleExceptionsSingleBlockUsingPipes()
     {
         try {
             throw new RuntimeException('Runtime exception occurred');
@@ -73,7 +73,7 @@ class ExceptionsKoansSolution extends TestCase
      * @test
      * @testdox The finally block is executed regardless of whether an exception is thrown or caught
      */
-    public function useFinallyBlockToExecuteSomethingAtTheEndOfTheTryCatchBlock()
+    public function usesFinallyBlockToExecuteSomethingAtTheEndOfTheTryCatchBlock()
     {
         try {
             throw new Exception('Something went wrong');
@@ -88,7 +88,7 @@ class ExceptionsKoansSolution extends TestCase
      * @test
      * @testdox Custom exception classes can be defined by extending the base Exception class
      */
-    public function createCustomExceptionsByExtendingTheExceptionClass()
+    public function createsCustomExceptionsByExtendingTheExceptionClass()
     {
         $this->expectException(CustomGenericException::class);
         $this->expectExceptionMessage("Some kind of madness");

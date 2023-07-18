@@ -11,7 +11,7 @@ class StringManipulationKoans extends TestCase
      * @test
      * @testdox You can interpolate variables in a double-quoted string
      */
-    public function useStringInterpolationInDoubleQuotedString()
+    public function usesStringInterpolationInDoubleQuotedString()
     {
         $value = "one";
         $string = "The value is $value";
@@ -35,7 +35,7 @@ class StringManipulationKoans extends TestCase
      * @test
      * @testdox Another option for variable interpolation in a double-quoted string is with curly brackets
      */
-    public function useStringInterpolationWithCurlyBrackets()
+    public function usesStringInterpolationWithCurlyBrackets()
     {
         $value = "one";
         $string = "The value is {$value}";
@@ -89,7 +89,7 @@ class StringManipulationKoans extends TestCase
      * @test
      * @testdox You can format a string using sprintf
      */
-    public function useStringFormattingWithSprintf()
+    public function usesStringFormattingWithSprintf()
     {
         $product = "banana";
 
@@ -118,7 +118,7 @@ class StringManipulationKoans extends TestCase
      * @test
      * @testdox Complex string formatting can be done with sprintf
      */
-    public function useComplexStringFormattingWithSprintf()
+    public function usesComplexStringFormattingWithSprintf()
     {
         $product = "bananas";
         $quantity = 3;
@@ -139,7 +139,7 @@ class StringManipulationKoans extends TestCase
      * @test
      * @testdox You can extract a substring from another string
      */
-    public function extractAStringFromAString()
+    public function extractsAStringFromAString()
     {
         $string = "Bacon, lettuce and tomato";
 
@@ -150,7 +150,7 @@ class StringManipulationKoans extends TestCase
      * @test
      * @testdox You can get a single character from a string using an array index
      */
-    public function getASingleCharacterFromAString()
+    public function getsASingleCharacterFromAString()
     {
         $string = "Bacon, lettuce and tomato";
 
@@ -161,7 +161,7 @@ class StringManipulationKoans extends TestCase
      * @test
      * @testdox Strings can be split
      */
-    public function splitTheStringIntoAnArray()
+    public function splitsTheStringIntoAnArray()
     {
         $string = "Sausage Egg Cheese";
         $words = explode(" ", $string);
@@ -173,7 +173,7 @@ class StringManipulationKoans extends TestCase
      * @test
      * @testdox Strings can be joined
      */
-    public function joinTheArrayInAString()
+    public function joinsTheArrayInAString()
     {
         $words = ["Now", "is", "the", "time"];
         $string = implode(" ", $words);
@@ -185,7 +185,7 @@ class StringManipulationKoans extends TestCase
      * @test
      * @testdox You can change the case of strings
      */
-    public function changeTheCaseOfTheStrings()
+    public function changesTheCaseOfTheStrings()
     {
         $this->assertEquals(__, ucwords('one hand clap'));
         $this->assertEquals(__, strtoupper('one hand clap'));

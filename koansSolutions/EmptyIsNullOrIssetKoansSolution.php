@@ -12,7 +12,7 @@ class EmptyIsNullOrIssetKoansSolution extends TestCase
      * @test
      * @testdox is_null return true if variable is null => https://www.w3schools.com/php/func_var_is_null.asp
      */
-    public function useIsNullMethodToCheckIfSomethingIsNull()
+    public function usesIsNullMethodToCheckIfSomethingIsNull()
     {
         $this->assertEquals(true, is_null(null));
         $this->assertEquals(false, is_null(""));
@@ -22,7 +22,7 @@ class EmptyIsNullOrIssetKoansSolution extends TestCase
      * @test
      * @testdox isset returns true if variable exists and it is not null => https://www.w3schools.com/php/func_var_isset.asp
      */
-    public function useIssetMethodsToCheckIfTheVariableExistsAndItIsNotNull()
+    public function usesIssetMethodsToCheckIfTheVariableExistsAndItIsNotNull()
     {
         $this->assertEquals(false, isset($something));
 
@@ -37,7 +37,7 @@ class EmptyIsNullOrIssetKoansSolution extends TestCase
      * @test
      * @testdox empty returns true if the variable is empty => https://www.w3schools.com/php/func_var_empty.asp
      */
-    public function useEmptyMethodToCheckIfTheVariableIsEmpty()
+    public function usesEmptyMethodToCheckIfTheVariableIsEmpty()
     {
         //Working with integers.
         $this->assertEquals(true, empty(0));

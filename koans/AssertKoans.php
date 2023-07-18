@@ -14,7 +14,7 @@ class AssertKoans extends TestCase
      * @test
      * @testdox We shall contemplate truth by testing reality, via asserts
      */
-    public function checkThatTheAssertConditionIsTrue()
+    public function checksThatTheAssertConditionIsTrue()
     {
         $this->assertTrue(false);
     }
@@ -23,7 +23,7 @@ class AssertKoans extends TestCase
      * @test
      * @testdox Enlightenment may be more easily achieved with appropriate messages
      */
-    public function checkIfANonEmptyArrayIsFalse()
+    public function checksIfANonEmptyArrayIsFalse()
     {
         $this->assertTrue(false, "This should be True, please fix this");
     }
@@ -32,7 +32,7 @@ class AssertKoans extends TestCase
      * @test
      * @testdox You can use assertEquals to check that two things are equal
      */
-    public function checkHowMuchIsOnePlusOne()
+    public function checksHowMuchIsOnePlusOne()
     {
         $this->assertEquals(__, 1 + 1);
     }
@@ -41,7 +41,7 @@ class AssertKoans extends TestCase
      * @test
      * @testdox To understand reality, we must compare our expectations against reality
      */
-    public function checkIfTwoVariablesAreEqualUsingAssertTrue()
+    public function checksIfTwoVariablesAreEqualUsingAssertTrue()
     {
         $expectedValue = __;
         $actualValue = 1 + 1;
@@ -53,7 +53,7 @@ class AssertKoans extends TestCase
      * @test
      * @testdox Some ways of asserting equality are better than others
      */
-    public function checkIfTwoVariablesAreEqualUsingAssertEquals()
+    public function checksIfTwoVariablesAreEqualUsingAssertEquals()
     {
         $expectedValue = __;
         $actualValue = 1 + 1;
@@ -65,7 +65,7 @@ class AssertKoans extends TestCase
      * @test
      * @testdox Sometimes we need to know the variable type
      */
-    public function checkTheTypeOfAString()
+    public function checksTheTypeOfAString()
     {
         $this->assertEquals(__, gettype("What am I"));
     }
@@ -74,7 +74,7 @@ class AssertKoans extends TestCase
      * @test
      * @testdox Sometimes we need to know the class type
      */
-    public function checkTheTypeOfAClass()
+    public function checksTheTypeOfAClass()
     {
         // See bottom of this file for class definition
         $object = new Enlightenment();

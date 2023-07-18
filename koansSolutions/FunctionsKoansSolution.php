@@ -14,7 +14,7 @@ class FunctionsKoansSolution extends TestCase
      * @test
      * @testdox Functions can be defined using the 'function' keyword
      */
-    public function useFunctionKeywordToDefineFunctions()
+    public function usesFunctionKeywordToDefineFunctions()
     {
         function sayHello(): string
         {
@@ -28,7 +28,7 @@ class FunctionsKoansSolution extends TestCase
      * @test
      * @testdox Functions can have arguments
      */
-    public function useFunctionsArgumentsToPassInformationToFunctions()
+    public function usesFunctionsArgumentsToPassInformationToFunctions()
     {
         function add($a, $b): int
         {
@@ -42,7 +42,7 @@ class FunctionsKoansSolution extends TestCase
      * @test
      * @testdox Functions can have default argument values
      */
-    public function useDefaultArgumentsValues()
+    public function usesDefaultArgumentsValues()
     {
         function greet($name = 'Guest'): string
         {
@@ -60,7 +60,7 @@ class FunctionsKoansSolution extends TestCase
      * @test
      * @testdox Functions can return multiple values using an array or list
      */
-    public function useMultipleReturnToReturnMultipleValues()
+    public function usesMultipleReturnToReturnMultipleValues()
     {
         function getFullName(): array
         {
@@ -80,7 +80,7 @@ class FunctionsKoansSolution extends TestCase
      * @test
      * @testdox Functions can be recursive
      */
-    public function useRecursionToCallTheFunctionInsideIt()
+    public function usesRecursionToCallTheFunctionInsideIt()
     {
         function factorial($n): int
         {

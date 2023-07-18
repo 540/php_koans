@@ -14,7 +14,7 @@ class StringKoans extends TestCase
      * @test
      * @testdox You can create strings using double quotes
      */
-    public function useDoubleQuotesToCreateStrings()
+    public function usesDoubleQuotesToCreateStrings()
     {
         $string = "Hello, world.";
 
@@ -26,7 +26,7 @@ class StringKoans extends TestCase
      * @test
      * @testdox You can use single quotes to create strings
      */
-    public function useSingleQuotesToCreateStrings()
+    public function usesSingleQuotesToCreateStrings()
     {
         $string = 'Goodbye, world.';
 
@@ -37,7 +37,7 @@ class StringKoans extends TestCase
      * @test
      * @testdox Use the backslash for escaping quotes in strings
      */
-    public function useBackslashForEscapingQuotesInStrings()
+    public function usesBackslashForEscapingQuotesInStrings()
     {
         $a = "He said, \"Don't\"";
         $b = 'He said, "Don\'t"';
@@ -49,7 +49,7 @@ class StringKoans extends TestCase
      * @test
      * @testdox Use single-quotes to create a string that contains double-quotes
      */
-    public function useSingleQuotesToCreateAStringWithDoubleQuotes()
+    public function usesSingleQuotesToCreateAStringWithDoubleQuotes()
     {
         $string = 'He said, "Go Away."';
 
@@ -60,7 +60,7 @@ class StringKoans extends TestCase
      * @test
      * @testdox Use double-quotes to create a string that contains single-quotes
      */
-    public function useDoubleQuotesToCreateAStringWithSingleQuotes()
+    public function usesDoubleQuotesToCreateAStringWithSingleQuotes()
     {
         $string = "Don't";
 
@@ -71,7 +71,7 @@ class StringKoans extends TestCase
      * @test
      * @testdox Strings can continue onto multiple lines
      */
-    public function useMultipleLinesToContinueStrings()
+    public function usesMultipleLinesToContinueStrings()
     {
         $string = "It was the best of times,
         It was the worst of times.";
@@ -84,7 +84,7 @@ class StringKoans extends TestCase
      * @test
      * @testdox A dot concatenates strings
      */
-    public function useDotToConcatenateStrings()
+    public function usesDotToConcatenateStrings()
     {
         $string = "Hello, " . "World";
 
@@ -95,7 +95,7 @@ class StringKoans extends TestCase
      * @test
      * @testdox Dot-concatenation works with variables
      */
-    public function useDotToConcatenateStringsVariables()
+    public function usesDotToConcatenateStringsVariables()
     {
         $hi = "Hello, ";
         $there = "World";
@@ -108,7 +108,7 @@ class StringKoans extends TestCase
      * @test
      * @testdox Dot-concatenation will not modify the original strings
      */
-    public function useDotToConcatenateStringsAndTheyWillNotBeModified()
+    public function usesDotToConcatenateStringsAndTheyWillNotBeModified()
     {
         $hi = "Hello, ";
         $there = "World";
@@ -122,7 +122,7 @@ class StringKoans extends TestCase
      * @test
      * @testdox Dot-equals will append to the end of a string
      */
-    public function useDotEqualsToAppendTheVariableToTheEndOfAString()
+    public function usesDotEqualsToAppendTheVariableToTheEndOfAString()
     {
         $hi = "Hello, ";
         $there = "World";

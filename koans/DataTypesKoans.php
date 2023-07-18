@@ -15,7 +15,7 @@ class DataTypesKoans extends TestCase
      * @test
      * @testdox A string is a data type that is used to represent text
      */
-    public function createStringUsingSingleOrDoubleQuotes()
+    public function createsStringUsingSingleOrDoubleQuotes()
     {
         $string = 3;
 
@@ -26,7 +26,7 @@ class DataTypesKoans extends TestCase
      * @test
      * @testdox Integers are numbers without decimals
      */
-    public function createIntUsingNumbersWithoutDecimals()
+    public function createsIntUsingNumbersWithoutDecimals()
     {
         $integer = 'I want to be an int';
 
@@ -37,7 +37,7 @@ class DataTypesKoans extends TestCase
      * @test
      * @testdox Floats are numbers with decimal points
      */
-    public function createFloatUsingNumbersWithDecimalPoints()
+    public function createsFloatUsingNumbersWithDecimalPoints()
     {
         $float = 1;
 
@@ -48,7 +48,7 @@ class DataTypesKoans extends TestCase
      * @test
      * @testdox Booleans represent true or false values
      */
-    public function createBooleansUsingTrueOrFalse()
+    public function createsBooleansUsingTrueOrFalse()
     {
         $booleanTrue = true;
         $booleanFalse = false;
@@ -63,7 +63,7 @@ class DataTypesKoans extends TestCase
      * @test
      * @testdox Arrays can hold multiple values
      */
-    public function createArrayUsingBracketsOrArrayKeyword()
+    public function createsArrayUsingBracketsOrArrayKeyword()
     {
         $array = [1, 2, 3];
 
@@ -75,7 +75,7 @@ class DataTypesKoans extends TestCase
      * @test
      * @testdox Objects are instances of classes
      */
-    public function createObjectsUsingNewKeyword()
+    public function createsObjectsUsingNewKeyword()
     {
         $object = new stdClass();
 
@@ -86,7 +86,7 @@ class DataTypesKoans extends TestCase
      * @test
      * @testdox Null represents the absence of a value
      */
-    public function createNullUsingNullKeyword()
+    public function createsNullUsingNullKeyword()
     {
         $null = null;
 
@@ -97,7 +97,7 @@ class DataTypesKoans extends TestCase
      * @test
      * @testdox Resources represent external resources (e.g., database connections, files...)
      */
-    public function checkIfOurComposerFileIsAResource()
+    public function checksIfOurComposerFileIsAResource()
     {
         $resource = fopen('composer.json', 'r');
 

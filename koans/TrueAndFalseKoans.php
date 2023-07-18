@@ -14,7 +14,7 @@ class TrueAndFalseKoans extends TestCase
      * @test
      * @testdox 3 and '3' are the same thing, but, the type? (Equal operator)
      */
-    public function useTheEqualOperatorToCheckIfStringAndIntAreEqual()
+    public function usesTheEqualOperatorToCheckIfStringAndIntAreEqual()
     {
         $integer = 3;
         $string = '3';
@@ -26,7 +26,7 @@ class TrueAndFalseKoans extends TestCase
      * @test
      * @testdox 3 and '3' are identical, or not? (Identical operator)
      */
-    public function useTheIdenticalOperatorToCheckIfStringAndIntAreIdentical()
+    public function usesTheIdenticalOperatorToCheckIfStringAndIntAreIdentical()
     {
         $integer = 3;
         $string = '3';
@@ -38,7 +38,7 @@ class TrueAndFalseKoans extends TestCase
      * @test
      * @testdox It's the same with Not Equal Operator
      */
-    public function useTheNotEqualOperatorToCheckIfStringAndIntAreEqual()
+    public function usesTheNotEqualOperatorToCheckIfStringAndIntAreEqual()
     {
         $integer = 3;
         $string = '3';
@@ -50,7 +50,7 @@ class TrueAndFalseKoans extends TestCase
      * @test
      * @testdox What happens if we use Not Identical Operator?
      */
-    public function useTheNotIdenticalOperatorToCheckIfStringAndIntAreIdentical()
+    public function usesTheNotIdenticalOperatorToCheckIfStringAndIntAreIdentical()
     {
         $integer = 3;
         $string = '3';
@@ -62,7 +62,7 @@ class TrueAndFalseKoans extends TestCase
      * @test
      * @testdox There are more comparison operators => https://www.w3schools.com/php/php_operators.asp
      */
-    public function useMoreComparisonOperators()
+    public function usesMoreComparisonOperators()
     {
         $age = 22;
         $weight = 70;
@@ -77,7 +77,7 @@ class TrueAndFalseKoans extends TestCase
      * @test
      * @testdox When you don't say anything are you saying the truth?
      */
-    public function checkIfAnEmptyStringIsTrue()
+    public function checksIfAnEmptyStringIsTrue()
     {
         $this->assertEquals(__, '');
     }
@@ -86,7 +86,7 @@ class TrueAndFalseKoans extends TestCase
      * @test
      * @testdox Is 0 false?
      */
-    public function checkIfZeroIsTrue()
+    public function checksIfZeroIsTrue()
     {
         $this->assertEquals(__, 0);
         $this->assertEquals(__, '0');
@@ -96,7 +96,7 @@ class TrueAndFalseKoans extends TestCase
      * @test
      * @testdox Is 'false' false?
      */
-    public function checkIfTheStringFalseIsReallyFalse()
+    public function checksIfTheStringFalseIsReallyFalse()
     {
         $this->assertEquals(__, 'false');
     }
@@ -105,7 +105,7 @@ class TrueAndFalseKoans extends TestCase
      * @test
      * @testdox What happens with empty arrays?
      */
-    public function checkIfAnEmptyArrayIsTrue()
+    public function checksIfAnEmptyArrayIsTrue()
     {
         $this->assertEquals(__, boolval(array()));
     }
@@ -114,7 +114,7 @@ class TrueAndFalseKoans extends TestCase
      * @test
      * @testdox What happens with NULL?
      */
-    public function checkIfNullIsTrue()
+    public function checksIfNullIsTrue()
     {
         $this->assertEquals(__, null);
     }

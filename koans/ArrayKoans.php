@@ -14,7 +14,7 @@ class ArrayKoans extends TestCase
      * @test
      * @testdox Index 0 is the first element of an array
      */
-    public function getTheValueOfTheFirstElementInAnArray()
+    public function getsTheValueOfTheFirstElementInAnArray()
     {
         $cars = array("BMW", "Mercedes", "Aston Martin");
 
@@ -25,7 +25,7 @@ class ArrayKoans extends TestCase
      * @test
      * @testdox Use count to calculate array lenght
      */
-    public function getTheLengthOfAnArray()
+    public function getsTheLengthOfAnArray()
     {
         $fruits = array("Apple", "Banana", "Pineaple", "Cherry");
 
@@ -36,7 +36,7 @@ class ArrayKoans extends TestCase
      * @test
      * @testdox Arrays can be of type key=>value => https://www.w3schools.com/php/php_arrays_associative.asp
      */
-    public function getTheAgeOnAssociativeArrays()
+    public function getsTheAgeOnAssociativeArrays()
     {
         $age = array("Joe"=>"49", "Mike"=>"27", "Charles"=>"32");
 
@@ -48,7 +48,7 @@ class ArrayKoans extends TestCase
      * @test
      * @testdox You can iterate through an array using loops => https://www.w3schools.com/php/php_looping_foreach.asp
      */
-    public function getAllTheValuesOfAnArrayUsingLoops()
+    public function getsAllTheValuesOfAnArrayUsingLoops()
     {
         $age = array("Joe"=>"49", "Mike"=>"27", "Charles"=>"32");
 
@@ -62,7 +62,7 @@ class ArrayKoans extends TestCase
      * @test
      * @testdox An array can be made up of more arrays => https://www.w3schools.com/php/php_arrays_multidimensional.asp
      */
-    public function getValuesFromAMultidimensionalArray()
+    public function getsValuesFromAMultidimensionalArray()
     {
         $cars = array (
             array("BMW","Blue","6913 CMC"),
@@ -80,7 +80,7 @@ class ArrayKoans extends TestCase
      * @test
      * @testdox You can sort an array in ascending order => https://www.w3schools.com/php/php_arrays_sort.asp
      */
-    public function sortAnArrayInAscendingOrder()
+    public function sortsAnArrayInAscendingOrder()
     {
         $numbers = array(3,2,2,1);
 
@@ -96,7 +96,7 @@ class ArrayKoans extends TestCase
      * @test
      * @testdox You can sort an array in descending order
      */
-    public function sortAnArrayInDescendingOrder()
+    public function sortsAnArrayInDescendingOrder()
     {
         $cars = array("BMW", "Mercedes", "Aston Martin");
 

@@ -18,7 +18,7 @@ class ClassesKoans extends TestCase
      * @test
      * @testdox Classes can be defined using the `class` keyword and you can create multiple instances of a class (objects)
      */
-    public function defineAClassUsingClassKeyword()
+    public function definesAClassUsingClassKeyword()
     {
         $exampleClass = 'I want to be an object of class ExampleClass';
 
@@ -40,7 +40,7 @@ class ClassesKoans extends TestCase
      * @test
      * @testdox Methods can be defined in a class
      */
-    public function useAMethodDefinedInExampleClass()
+    public function usesAMethodDefinedInExampleClass()
     {
         $exampleClass = new ExampleClass();
 
@@ -51,7 +51,7 @@ class ClassesKoans extends TestCase
      * @test
      * @testdox Classes can have constructors => https://www.w3schools.com/php/php_oop_constructor.asp
      */
-    public function initializePropertiesWithConstructor()
+    public function initializesPropertiesWithConstructor()
     {
         $car = new Car(__, __);
 
@@ -63,7 +63,7 @@ class ClassesKoans extends TestCase
      * @test
      * @testdox Classes can have getters and setters methods to access and set value to properties
      */
-    public function useGettersAndSettersToSetAndGetPropertiesValues()
+    public function usesGettersAndSettersToSetAndGetPropertiesValues()
     {
         $car = new Car('yellow', 'Aston Martin');
 
@@ -77,7 +77,7 @@ class ClassesKoans extends TestCase
      * @test
      * @testdox Classes can have static properties and methods => https://www.w3schools.com/php/php_oop_static_properties.asp
      */
-    public function useStaticPropsAndMethodsWithNoInstance()
+    public function usesStaticPropsAndMethodsWithNoInstance()
     {
         Car::$counter++;
 
@@ -89,7 +89,7 @@ class ClassesKoans extends TestCase
      * @test
      * @testdox Private methods and properties cannot be accessed directly from outside the class
      */
-    public function useTheCorrectExceptionMessageToPassTheTest()
+    public function usesTheCorrectExceptionMessageToPassTheTest()
     {
         $car = new Car('yellow', 'Mercedes');
 
@@ -102,7 +102,7 @@ class ClassesKoans extends TestCase
      * @test
      * @testdox Protected methods and properties cannot be accessed directly from outside the class
      */
-    public function usePublicMethodsToAccessToProtectedProperties()
+    public function usesPublicMethodsToAccessToProtectedProperties()
     {
         $car = new Car('yellow', 'Mercedes');
 
@@ -113,7 +113,7 @@ class ClassesKoans extends TestCase
      * @test
      * @testdox Child classes can inherit properties and methods from their parent class => https://www.w3schools.com/php/php_oop_inheritance.asp
      */
-    public function useInheritedPublicProtectedPropsMethods()
+    public function usesInheritedPublicProtectedPropsMethods()
     {
         $sportCar = new SportCar('blue', 'Toyota');
 
@@ -129,7 +129,7 @@ class ClassesKoans extends TestCase
      * @test
      * @testdox Child classes can override methods from the parent class
      */
-    public function useTheOverridenMethodsInTheChildClass()
+    public function usesTheOverridenMethodsInTheChildClass()
     {
         $sportCar = new SportCar('yellow', 'Ferrari');
 
@@ -141,7 +141,7 @@ class ClassesKoans extends TestCase
      * @test
      * @testdox The protected properties and methods are visible in the subclass, but the private ones not
      */
-    public function checkVisibilityOfInheritedPrivateProtectedPropsAndMethods()
+    public function checksVisibilityOfInheritedPrivateProtectedPropsAndMethods()
     {
         $sportCar = new SportCar('yellow', 'Ferrari');
 
