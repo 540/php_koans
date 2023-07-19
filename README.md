@@ -85,22 +85,6 @@ If that version is outdated, you can use Remi's Repository to install a newer ve
 sudo pacman -S php
 ```
 
-### Dockerization
-
-If you prefer not to install php in your system, you can use a docker container.
-
-To build the image run a terminal, go to the php_koans folder and run:
-
-```
-docker build . -t 'php-koans'
-```
-
-Every time you want to execute the suite run:
-
-```
-docker run -ti php-koans
-```
-
 ## Getting Started
 
 If all the koans are to be executed from terminal:
@@ -140,19 +124,19 @@ These are the list of koans from Python Koans to be ported over to PHP Koans.
 - [AboutDictionaries](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_dictionaries.py)
 - [~~AboutStringManipulation~~](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_string_manipulation.py)
 - [AboutTuples](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_tuples.py)
-- [AboutMethods](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_methods.py)
+- [~~AboutMethods~~](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_methods.py)
 - [AboutControlStatements](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_control_statements.py)
-- [AboutTrueAndFalse](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_true_and_false.py)
+- [~~AboutTrueAndFalse~~](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_true_and_false.py)
 - [AboutSets](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_sets.py)
 - [AboutTriangleProject](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_triangle_project.py)
-- [AboutExceptions](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_exceptions.py)
+- [~~AboutExceptions~~](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_exceptions.py)
 - [AboutTriangleProject2](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_triangle_project2.py)
 - [AboutIteration](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_iteration.py)
 - [AboutComprehension](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_comprehension.py)
 - [AboutGenerators](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_generators.py)
 - [AboutLambdas](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_lambdas.py)
 - [AboutScoringProject](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_scoring_project.py)
-- [AboutClasses](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_classes.py)
+- [~~AboutClasses~~](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_classes.py)
 - [AboutNewStyleClasses](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_new_style_classes.py)
 - [AboutWithStatements](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_with_statements.py)
 - [AboutMonkeyPatching](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_monkey_patching.py)
@@ -169,6 +153,5 @@ These are the list of koans from Python Koans to be ported over to PHP Koans.
 - [AboutAttributeAccess](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_attribute_access.py)
 - [AboutDeletingObjects](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_deleting_objects.py)
 - [AboutProxyObjectProject](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_proxy_object_project.py)
-- TelevisionTest
 - [AboutExtraCredit](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_extra_credit.py)
-- [AboutRegex](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_regex.py)
+- [~~AboutRegex~~](https://github.com/gregmalcolm/python_koans/blob/master/python2/koans/about_regex.py)
