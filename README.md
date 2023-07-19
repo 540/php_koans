@@ -85,6 +85,25 @@ If that version is outdated, you can use Remi's Repository to install a newer ve
 sudo pacman -S php
 ```
 
+### Dockerization
+
+If you prefer not to install php in your system, you can use a docker container.
+
+To use the Docker container, follow these steps:
+
+1. Ensure that Docker is installed on your machine.
+
+2. Open a terminal and navigate to the root directory of the PHPKoans project.
+
+3. Run the following command to start the Docker container: `docker compose up -d`
+
+4. Once the container is running, you can enter it using the following command: `docker exec -it phpkoans bash`
+
+Now you are now inside the container and can proceed with the following steps to run the koans.
+
+
+
+
 ## Getting Started
 
 If all the koans are to be executed from terminal:
