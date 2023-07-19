@@ -7,9 +7,9 @@ use PHPUnit\Framework\TestCase;
 defined('__') or define('__', null);
 
 // Resources for learning about Booleans => https://www.php.net/manual/es/language.types.boolean.php
+
 class TrueAndFalseKoans extends TestCase
 {
-
     /**
      * @test
      * @testdox 3 and '3' are the same thing, but, the type? (Equal operator)

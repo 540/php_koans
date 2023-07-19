@@ -7,9 +7,9 @@ use PHPUnit\Framework\TestCase;
 defined('__') or define('__', null);
 
 // Resources for learning about Strings => https://www.w3schools.com/php/php_string.asp
+
 class StringKoans extends TestCase
 {
-
     /**
      * @test
      * @testdox You can create strings using double quotes
@@ -39,10 +39,10 @@ class StringKoans extends TestCase
      */
     public function usesBackslashForEscapingQuotesInStrings()
     {
-        $a = "He said, \"Don't\"";
-        $b = 'He said, "Don\'t"';
+        $firstString = "He said, \"Don't\"";
+        $secondString = 'He said, "Don\'t"';
 
-        $this->assertEquals(__, ($a == $b));
+        $this->assertEquals(__, ($firstString == $secondString));
     }
 
     /**
@@ -97,9 +97,9 @@ class StringKoans extends TestCase
      */
     public function usesDotToConcatenateStringsVariables()
     {
-        $hi = "Hello, ";
+        $hello = "Hello, ";
         $there = "World";
-        $string = $hi . $there;
+        $string = $hello . $there;
 
         $this->assertEquals(__, $string);
     }
@@ -110,11 +110,11 @@ class StringKoans extends TestCase
      */
     public function usesDotToConcatenateStringsAndTheyWillNotBeModified()
     {
-        $hi = "Hello, ";
+        $hello = "Hello, ";
         $there = "World";
-        $string = $hi . $there;
+        $string = $hello . $there;
 
-        $this->assertEquals(__, $hi);
+        $this->assertEquals(__, $hello);
         $this->assertEquals(__, $there);
     }
 
@@ -124,10 +124,10 @@ class StringKoans extends TestCase
      */
     public function usesDotEqualsToAppendTheVariableToTheEndOfAString()
     {
-        $hi = "Hello, ";
+        $hello = "Hello, ";
         $there = "World";
-        $hi .= $there;
+        $hello .= $there;
 
-        $this->assertEquals(__, $hi);
+        $this->assertEquals(__, $hello);
     }
 }

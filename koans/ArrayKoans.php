@@ -7,9 +7,9 @@ use PHPUnit\Framework\TestCase;
 defined('__') or define('__', null);
 
 // Resources for learning about arrays => https://www.w3schools.com/php/php_arrays.asp
+
 class ArrayKoans extends TestCase
 {
-
     /**
      * @test
      * @testdox Index 0 is the first element of an array
@@ -38,7 +38,7 @@ class ArrayKoans extends TestCase
      */
     public function getsTheAgeOnAssociativeArrays()
     {
-        $age = array("Joe"=>"49", "Mike"=>"27", "Charles"=>"32");
+        $age = array("Joe" => "49", "Mike" => "27", "Charles" => "32");
 
         // Extract Joe´s Age
         $this->assertEquals(__, "49");
@@ -50,7 +50,7 @@ class ArrayKoans extends TestCase
      */
     public function getsAllTheValuesOfAnArrayUsingLoops()
     {
-        $age = array("Joe"=>"49", "Mike"=>"27", "Charles"=>"32");
+        $age = array("Joe" => "49", "Mike" => "27", "Charles" => "32");
 
         // Create a ForEach Loop to pass the test
 
@@ -86,10 +86,10 @@ class ArrayKoans extends TestCase
 
         // Sort the elements of the $numbers array in ascending order (Hint: There are functions to sort arrays)
 
-        $this->assertEquals(__,1);
-        $this->assertEquals(__,2);
-        $this->assertEquals(__,2);
-        $this->assertEquals(__,3);
+        $this->assertEquals(__, 1);
+        $this->assertEquals(__, 2);
+        $this->assertEquals(__, 2);
+        $this->assertEquals(__, 3);
     }
 
     /**

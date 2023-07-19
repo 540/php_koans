@@ -11,9 +11,9 @@ use RuntimeException;
 defined('__') or define('__', null);
 
 // Resources for learning about Exceptions => https://www.w3schools.com/php/php_exceptions.asp
+
 class ExceptionsKoansSolution extends TestCase
 {
-
     /**
      * @test
      * @testdox Exceptions can be thrown using the `throw` keyword
@@ -62,7 +62,7 @@ class ExceptionsKoansSolution extends TestCase
     {
         try {
             throw new RuntimeException('Runtime exception occurred');
-        } catch (RuntimeException|LogicException $exception) {
+        } catch (RuntimeException | LogicException $exception) {
             $this->assertEquals('Runtime exception occurred', $exception->getMessage());
         } catch (Exception $exception) {
             $this->fail('Should not catch this exception');

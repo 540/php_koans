@@ -8,9 +8,9 @@ use stdClass;
 defined('__') or define('__', null);
 
 // Resources for learning about Data Types => https://www.w3schools.com/php/php_datatypes.asp
+
 class DataTypesKoans extends TestCase
 {
-
     /**
      * @test
      * @testdox A string is a data type that is used to represent text

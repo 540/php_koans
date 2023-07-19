@@ -10,13 +10,18 @@ use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
 
+/**
+ * @SuppressWarnings(PHPMD.TooManyPublicMethods)
+ * @SuppressWarnings(PHPMD.StaticAccess)
+ */
+
 // Resources for learning about Classes and Objects => https://www.w3schools.com/php/php_oop_classes_objects.asp
+
 class ClassesKoansSolution extends TestCase
 {
-
     /**
      * @test
-     * @testdox Classes can be defined using the `class` keyword and you can create multiple instances of a class (objects)
+     * @testdox You can create multiple instances of a class (objects)
      */
     public function definesAClassUsingClassKeyword()
     {
@@ -27,7 +32,7 @@ class ClassesKoansSolution extends TestCase
 
     /**
      * @test
-     * @testdox Classes can have properties and can only be accessed if they are public https://www.w3schools.com/php/php_oop_access_modifiers.asp
+     * @testdox Classes can have properties and can only be accessed if they are public
      */
     public function accessToAPublicProperty()
     {
@@ -75,7 +80,7 @@ class ClassesKoansSolution extends TestCase
 
     /**
      * @test
-     * @testdox Classes can have static properties and methods => https://www.w3schools.com/php/php_oop_static_properties.asp
+     * @testdox Static properties and methods => https://www.w3schools.com/php/php_oop_static_properties.asp
      */
     public function usesStaticPropsAndMethodsWithNoInstance()
     {
@@ -111,7 +116,7 @@ class ClassesKoansSolution extends TestCase
 
     /**
      * @test
-     * @testdox Child classes can inherit properties and methods from their parent class => https://www.w3schools.com/php/php_oop_inheritance.asp
+     * @testdox Child classes can inherit properties and methods from their parent class
      */
     public function usesInheritedPublicProtectedPropsMethods()
     {
