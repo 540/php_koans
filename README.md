@@ -103,7 +103,6 @@ Now you are now inside the container and can proceed with the following steps to
 
 
 
-
 ## Getting Started
 
 If all the koans are to be executed from terminal:
