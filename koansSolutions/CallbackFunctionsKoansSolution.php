@@ -7,6 +7,10 @@ use PHPUnit\Framework\TestCase;
 
 defined('__') or define('__', null);
 
+/**
+ * @SuppressWarnings(PHPMD.LongVariable)
+ */
+
 // Resources for learning about callbacks => https://www.php.net/manual/en/language.types.callable.php
 
 class CallbackFunctionsKoansSolution extends TestCase
@@ -80,10 +84,10 @@ class CallbackFunctionsKoansSolution extends TestCase
     public function usesArrayMapToChangeAnArrayUsingAFunction()
     {
         $numbers = [1, 2, 3, 4, 5];
-        $callback = function($number): int{
+        $callback = function ($number): int {
             return $number ** 2;
         };
-        
+
         $result = array_map($callback, $numbers);
 
         $this->assertEquals([1, 4, 9, 16, 25], $result);
